@@ -239,6 +239,11 @@ a:focus {
   }
 }
 @media (max-width: 767px) {
+  .main-header {
+    z-index: 998;
+  }
+}
+@media (max-width: 767px) {
   .main-header .navbar-right {
     float: none;
   }
@@ -428,15 +433,7 @@ a:focus {
 }
 @media (max-width: 767px) {
   .main-sidebar {
-    padding-top: 100px;
-  }
-}
-@media (max-width: 767px) {
-  .main-sidebar {
-    -webkit-transform: translate(-230px, 0);
-    -ms-transform: translate(-230px, 0);
-    -o-transform: translate(-230px, 0);
-    transform: translate(-230px, 0);
+    padding-top: 0;
   }
 }
 @media (min-width: 768px) {

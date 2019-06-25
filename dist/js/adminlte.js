@@ -1006,6 +1006,17 @@ throw new Error('AdminLTE requires jQuery')
   Layout.prototype.activate = function () {
     this.fix();
 
+    var touchSideSwipe = new TouchSideSwipe({
+      elementID: 'main-sidebar',
+      elementWidth: 230, //px
+      elementMaxWidth: 0.72, // *100%
+      sideHookWidth: 40, //px
+      moveSpeed: 0.3,
+      opacityBackground: 0.4,
+      shiftForStart: 90,
+      windowMaxWidth: 768,
+    });
+
     if ($(window).width() < 767) {
       new SimpleBar($('.main-sidebar')[0]);
     }
