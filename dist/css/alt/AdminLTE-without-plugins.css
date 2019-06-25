@@ -567,14 +567,6 @@ a:focus {
  * Component: Sidebar Mini
  */
 @media (min-width: 768px) {
-  .fixed .sidebar-mini .sidebar-collapse .sidebar-menu > li > a > span {
-    display: initial !important;
-  }
-  .fixed .sidebar-mini .sidebar-collapse .sidebar-menu > li > a .sidebar-menu-text {
-    opacity: 0 !important;
-  }
-}
-@media (min-width: 768px) {
   .sidebar-mini.sidebar-collapse .content-wrapper,
   .sidebar-mini.sidebar-collapse .right-side,
   .sidebar-mini.sidebar-collapse .main-footer {
@@ -635,6 +627,14 @@ a:focus {
   }
   .sidebar-mini.sidebar-collapse .main-header .navbar {
     margin-left: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .fixed.sidebar-mini.sidebar-collapse .sidebar-menu > li > a > span {
+    display: initial !important;
+  }
+  .fixed.sidebar-mini.sidebar-collapse .sidebar-menu > li > a > .sidebar-menu-text {
+    opacity: 0 !important;
   }
 }
 @media (min-width: 768px) {
@@ -699,6 +699,7 @@ a:focus {
 }
 .sidebar-menu li > a > .sidebar-menu-text {
   -webkit-transition: opacity 0.2s ease 0s;
+  -o-transition: opacity 0.2s ease 0s;
   transition: opacity 0.2s ease 0s;
   padding-left: 9px;
   opacity: 1;

@@ -1,24 +1,6 @@
 /*
  * Component: Sidebar Mini
  */
-@media (min-width: @screen-sm) {
-  .fixed {
-    .sidebar-mini {
-      .sidebar-collapse {
-        .sidebar-menu>li>a {
-          >span {
-            display: initial !important;
-          }
-
-          .sidebar-menu-text {
-            opacity: 0 !important;
-          }
-        }
-      }
-    }
-  }
-}
-
 
 //Add sidebar-mini class to the body tag to activate this feature
 .sidebar-mini {
@@ -120,6 +102,24 @@
 }
 
 @media (min-width: @screen-sm) {
+  .fixed {
+    &.sidebar-mini {
+      &.sidebar-collapse {
+        .sidebar-menu>li>a {
+          >span {
+            display: initial !important;
+          }
+
+          >.sidebar-menu-text {
+            opacity: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm) {
 
   // Show menu items on hover
   .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse {
@@ -208,8 +208,7 @@
   }
 
   >.sidebar-menu-text {
-    -webkit-transition: opacity 0.2s ease 0s;
-    transition: opacity 0.2s ease 0s;
+    .transition(opacity 0.2s ease 0s);
     padding-left: 9px;
     opacity: 1;
   }
