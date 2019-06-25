@@ -85,6 +85,10 @@
   }
 }
 
+.fixed .sidebar-menu {
+  width: 230px;
+}
+
 // Sidebar menu
 .sidebar-menu {
   list-style: none;
@@ -123,8 +127,14 @@
     font-size: 12px;
   }
 
-  li>a>.fa-angle-left,
-  li>a>.pull-right-container>.fa-angle-left {
+  >li>.header-ellipsis {
+    padding: 2px 0px 2px 5px;
+    font-size: 13px;
+    display: none;
+  }
+
+  li>a>.fa-angle-down,
+  li>a>.pull-right-container>.fa-angle-down {
     width: auto;
     height: auto;
     padding: 0;
@@ -132,7 +142,7 @@
     .transition(transform .5s ease);
   }
 
-  li>a>.fa-angle-left {
+  li>a>.fa-angle-down {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -141,9 +151,9 @@
 
   .menu-open {
 
-    >a>.fa-angle-left,
-    >a>.pull-right-container>.fa-angle-left {
-      .rotate(-90deg);
+    >a>.fa-angle-down,
+    >a>.pull-right-container>.fa-angle-down {
+      .rotate(180deg);
     }
   }
 

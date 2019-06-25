@@ -15,24 +15,30 @@
   &.box-primary {
     border-top-color: @light-blue;
   }
+
   &.box-info {
     border-top-color: @aqua;
   }
+
   &.box-danger {
     border-top-color: @red;
   }
+
   &.box-warning {
     border-top-color: @yellow;
   }
+
   &.box-success {
     border-top-color: @green;
   }
+
   &.box-default {
     border-top-color: @gray-lte;
   }
 
   // collapsed mode
   &.collapsed-box {
+
     .box-body,
     .box-footer {
       display: none;
@@ -40,9 +46,10 @@
   }
 
   .nav-stacked {
-    > li {
+    >li {
       border-bottom: 1px solid @box-border-color;
       margin: 0;
+
       &:last-of-type {
         border-bottom: none;
       }
@@ -60,6 +67,7 @@
   .border-right {
     border-right: 1px solid @box-border-color;
   }
+
   .border-left {
     border-left: 1px solid @box-border-color;
   }
@@ -70,10 +78,12 @@
 
   &.box-solid {
     border-top: 0;
-    > .box-header {
+
+    >.box-header {
       .btn.btn-default {
         background: transparent;
       }
+
       .btn,
       a {
         &:hover {
@@ -86,30 +96,35 @@
     &.box-default {
       .box-solid-variant(@gray-lte, #444);
     }
+
     &.box-primary {
       .box-solid-variant(@light-blue);
     }
+
     &.box-info {
       .box-solid-variant(@aqua);
     }
+
     &.box-danger {
       .box-solid-variant(@red);
     }
+
     &.box-warning {
       .box-solid-variant(@yellow);
     }
+
     &.box-success {
       .box-solid-variant(@green);
     }
 
-    > .box-header > .box-tools .btn {
+    >.box-header>.box-tools .btn {
       border: 0;
       box-shadow: none;
     }
 
     // Fix font color for tiles
     &[class*='bg'] {
-      > .box-header {
+      >.box-header {
         color: #fff;
       }
     }
@@ -118,7 +133,7 @@
 
   //BOX GROUP
   .box-group {
-    > .box {
+    >.box {
       margin-bottom: 5px;
     }
   }
@@ -135,9 +150,10 @@
 
 .box,
 .overlay-wrapper {
+
   // Box overlay for LOADING STATE effect
-  > .overlay,
-  > .loading-img {
+  >.overlay,
+  >.loading-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -149,7 +165,8 @@
     z-index: 50;
     background: rgba(255, 255, 255, 0.7);
     .border-radius(@box-border-radius);
-    > .fa {
+
+    >.fa {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -182,30 +199,34 @@
   //Add bottom border
   &.with-border {
     border-bottom: 1px solid @box-border-color;
+
     .collapsed-box & {
       border-bottom: none;
     }
   }
 
   //Icons and box title
-  > .fa,
-  > .glyphicon,
-  > .ion,
+  >.fa,
+  >.glyphicon,
+  >.ion,
   .box-title {
     display: inline-block;
     font-size: 18px;
     margin: 0;
     line-height: 1;
   }
-  > .fa,
-  > .glyphicon,
-  > .ion {
+
+  >.fa,
+  >.glyphicon,
+  >.ion {
     margin-right: 5px;
   }
-  > .box-tools {
+
+  >.box-tools {
     position: absolute;
     right: 10px;
     top: 5px;
+
     [data-toggle="tooltip"] {
       position: relative;
     }
@@ -217,8 +238,8 @@
       }
     }
 
-    .dropdown-menu > li > a {
-      color: #444!important;
+    .dropdown-menu>li>a {
+      color: #444 !important;
     }
   }
 }
@@ -229,10 +250,12 @@
   font-size: 12px;
   background: transparent;
   color: darken(@box-default-border-top-color, 20%);
+
   .open &,
   &:hover {
     color: darken(@box-default-border-top-color, 40%);
   }
+
   &.btn:active {
     box-shadow: none;
   }
@@ -242,11 +265,13 @@
 .box-body {
   .border-radius(0; 0; @box-border-radius; @box-border-radius);
   padding: @box-padding;
+
   .no-header & {
     .border-top-radius(@box-border-radius);
   }
+
   // Tables within the box body
-  > .table {
+  >.table {
     margin-bottom: 0;
   }
 
@@ -258,6 +283,7 @@
   .full-width-chart {
     margin: -19px;
   }
+
   &.no-padding .full-width-chart {
     margin: -9px;
   }
@@ -265,6 +291,7 @@
   .box-pane {
     .border-radius(0; 0; @box-border-radius; 0);
   }
+
   .box-pane-right {
     .border-radius(0; 0; 0; @box-border-radius);
   }
@@ -281,7 +308,8 @@
 .chart-legend {
   &:extend(.list-unstyled);
   margin: 10px 0;
-  > li {
+
+  >li {
     @media (max-width: @screen-sm-max) {
       float: left;
       margin-right: 10px;
@@ -292,30 +320,37 @@
 //Comment Box
 .box-comments {
   background: #f7f7f7;
+
   .box-comment {
     .clearfix();
     padding: 8px 0;
     border-bottom: 1px solid #eee;
+
     &:last-of-type {
       border-bottom: 0;
     }
+
     &:first-of-type {
       padding-top: 0;
     }
+
     img {
       &:extend(.img-sm);
       float: left;
     }
   }
+
   .comment-text {
     margin-left: 40px;
     color: #555;
   }
+
   .username {
     color: #444;
     display: block;
     font-weight: 600;
   }
+
   .text-muted {
     font-weight: 400;
     font-size: 12px;
@@ -332,19 +367,21 @@
   padding: 0;
   list-style: none;
   overflow: auto;
+
   // Todo list element
-  > li {
+  >li {
     .border-radius(2px);
     padding: 10px;
     background: #f4f4f4;
     margin-bottom: 2px;
     border-left: 2px solid #e6e7e8;
     color: #444;
+
     &:last-of-type {
       margin-bottom: 0;
     }
 
-    > input[type='checkbox'] {
+    >input[type='checkbox'] {
       margin: 0 10px 0 5px;
     }
 
@@ -365,26 +402,31 @@
       display: none;
       float: right;
       color: @red;
+
       // icons
-      > .fa, > .glyphicon, > .ion {
+      >.fa,
+      >.glyphicon,
+      >.ion {
         margin-right: 5px;
         cursor: pointer;
       }
 
     }
+
     &:hover .tools {
       display: inline-block;
     }
 
     &.done {
       color: #999;
+
       .text {
         text-decoration: line-through;
         font-weight: 500;
       }
 
       .label {
-        background: @gray-lte !important;
+        background: @gray-lte  !important;
       }
     }
   }
@@ -393,15 +435,19 @@
   .danger {
     border-left-color: @red;
   }
+
   .warning {
     border-left-color: @yellow;
   }
+
   .info {
     border-left-color: @aqua;
   }
+
   .success {
     border-left-color: @green;
   }
+
   .primary {
     border-left-color: @light-blue;
   }
@@ -423,54 +469,66 @@
   .item {
     .clearfix();
     margin-bottom: 10px;
+
     // The image
-    > img {
+    >img {
       width: 40px;
       height: 40px;
       border: 2px solid transparent;
       .border-radius(50%);
     }
 
-    > .online {
+    >.online {
       border: 2px solid @green;
     }
-    > .offline {
+
+    >.offline {
       border: 2px solid @red;
     }
 
     // The message body
-    > .message {
+    >.message {
       margin-left: 55px;
       margin-top: -40px;
-      > .name {
+
+      >.name {
         display: block;
         font-weight: 600;
       }
     }
 
     // The attachment
-    > .attachment {
+    >.attachment {
       .border-radius(@attachment-border-radius);
       background: #f4f4f4;
       margin-left: 65px;
       margin-right: 15px;
       padding: 10px;
-      > h4 {
+
+      >h4 {
         margin: 0 0 5px 0;
         font-weight: 600;
         font-size: 14px;
       }
-      > p, > .filename {
+
+      >p,
+      >.filename {
         font-weight: 600;
         font-size: 13px;
         font-style: italic;
         margin: 0;
 
       }
+
       .clearfix();
     }
   }
 
+}
+
+.chat-box {
+  padding: 0;
+  max-height: 250px !important;
 }
 
 //END CHAT WIDGET

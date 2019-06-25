@@ -555,40 +555,40 @@ throw new Error('AdminLTE requires jQuery')
  *          or add [data-toggle="push-menu"] to any button
  *          Pass any option as data-option="value"
  */
-+function ($) {
++ function ($) {
   'use strict';
 
   var DataKey = 'lte.pushmenu';
 
   var Default = {
-    collapseScreenSize   : 767,
-    expandOnHover        : false,
-    expandTransitionDelay: 200
+    collapseScreenSize: 767,
+    expandOnHover: false,
+    expandTransitionDelay: 50
   };
 
   var Selector = {
-    collapsed     : '.sidebar-collapse',
-    open          : '.sidebar-open',
-    mainSidebar   : '.main-sidebar',
+    collapsed: '.sidebar-collapse',
+    open: '.sidebar-open',
+    mainSidebar: '.main-sidebar',
     contentWrapper: '.content-wrapper',
-    searchInput   : '.sidebar-form .form-control',
-    button        : '[data-toggle="push-menu"]',
-    mini          : '.sidebar-mini',
-    expanded      : '.sidebar-expanded-on-hover',
-    layoutFixed   : '.fixed'
+    searchInput: '.sidebar-form .form-control',
+    button: '[data-toggle="push-menu"]',
+    mini: '.sidebar-mini',
+    expanded: '.sidebar-expanded-on-hover',
+    layoutFixed: '.fixed'
   };
 
   var ClassName = {
-    collapsed    : 'sidebar-collapse',
-    open         : 'sidebar-open',
-    mini         : 'sidebar-mini',
-    expanded     : 'sidebar-expanded-on-hover',
+    collapsed: 'sidebar-collapse',
+    open: 'sidebar-open',
+    mini: 'sidebar-mini',
+    expanded: 'sidebar-expanded-on-hover',
     expandFeature: 'sidebar-mini-expand-feature',
-    layoutFixed  : 'fixed'
+    layoutFixed: 'fixed'
   };
 
   var Event = {
-    expanded : 'expanded.pushMenu',
+    expanded: 'expanded.pushMenu',
     collapsed: 'collapsed.pushMenu'
   };
 
@@ -600,8 +600,8 @@ throw new Error('AdminLTE requires jQuery')
   };
 
   PushMenu.prototype.init = function () {
-    if (this.options.expandOnHover
-      || ($('body').is(Selector.mini + Selector.layoutFixed))) {
+    if (this.options.expandOnHover ||
+      ($('body').is(Selector.mini + Selector.layoutFixed))) {
       this.expandOnHover();
       $('body').addClass(ClassName.expandFeature);
     }
@@ -621,7 +621,7 @@ throw new Error('AdminLTE requires jQuery')
 
   PushMenu.prototype.toggle = function () {
     var windowWidth = $(window).width();
-    var isOpen      = !$('body').hasClass(ClassName.collapsed);
+    var isOpen = !$('body').hasClass(ClassName.collapsed);
 
     if (windowWidth <= this.options.collapseScreenSize) {
       isOpen = $('body').hasClass(ClassName.open);
@@ -640,8 +640,7 @@ throw new Error('AdminLTE requires jQuery')
     if (windowWidth > this.options.collapseScreenSize) {
       $('body').removeClass(ClassName.collapsed)
         .trigger($.Event(Event.expanded));
-    }
-    else {
+    } else {
       $('body').addClass(ClassName.open)
         .trigger($.Event(Event.expanded));
     }
@@ -660,8 +659,8 @@ throw new Error('AdminLTE requires jQuery')
 
   PushMenu.prototype.expandOnHover = function () {
     $(Selector.mainSidebar).hover(function () {
-      if ($('body').is(Selector.mini + Selector.collapsed)
-        && $(window).width() > this.options.collapseScreenSize) {
+      if ($('body').is(Selector.mini + Selector.collapsed) &&
+        $(window).width() > this.options.collapseScreenSize) {
         this.expand();
       }
     }.bind(this), function () {
@@ -690,7 +689,7 @@ throw new Error('AdminLTE requires jQuery')
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this);
-      var data  = $this.data(DataKey);
+      var data = $this.data(DataKey);
 
       if (!data) {
         var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option);
@@ -703,7 +702,7 @@ throw new Error('AdminLTE requires jQuery')
 
   var old = $.fn.pushMenu;
 
-  $.fn.pushMenu             = Plugin;
+  $.fn.pushMenu = Plugin;
   $.fn.pushMenu.Constructor = PushMenu;
 
   // No Conflict Mode
@@ -723,7 +722,6 @@ throw new Error('AdminLTE requires jQuery')
     Plugin.call($(Selector.button));
   });
 }(jQuery);
-
 
 /* TodoList()
  * =========
