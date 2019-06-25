@@ -24,6 +24,7 @@
     mainHeader: '.main-header',
     sidebar: '.sidebar',
     controlSidebar: '.control-sidebar',
+    csOpen: '.control-sidebar-open',
     fixed: '.fixed',
     sidebarMenu: '.sidebar-menu',
     logo: '.main-header .logo'
@@ -102,6 +103,14 @@
   };
 
   Layout.prototype.fix = function () {
+    var bd = document.getElementsByClassName("control-sidebar-backdrop");
+    if ($(window).width() < 767 && $(Selector.controlSidebar).is(Selector.csOpen)) {
+      bd[0].style.zIndex = 999;
+      bd[0].style.opacity = 0.5;
+    } else {
+      bd[0].style.zIndex = -999;
+      bd[0].style.opacity = 0;
+    }
     // Remove overflow from .wrapper if layout-boxed exists
     $(Selector.layoutBoxed + ' > ' + Selector.wrapper).css('overflow', 'hidden');
 

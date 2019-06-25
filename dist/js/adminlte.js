@@ -375,17 +375,28 @@ throw new Error('AdminLTE requires jQuery')
     }.bind(this));
   };
 
-  ControlSidebar.prototype.backdropOpen = function () {
+  ControlSidebar.prototype.backdropOpen = function (event) {
     var bd = document.getElementsByClassName("control-sidebar-backdrop");
     bd[0].style.zIndex = 999;
     bd[0].style.opacity = 0.5;
   }
 
-  ControlSidebar.prototype.backdropClose = function () {
+  ControlSidebar.prototype.backdropClose = function (event) {
     var bd = document.getElementsByClassName("control-sidebar-backdrop");
     bd[0].style.zIndex = -999;
     bd[0].style.opacity = 0;
   }
+
+  ControlSidebar.prototype.backdropToggle = function (event) {
+
+    if ($(window).width() < 767) {
+      if (event == 'expand') {
+        this.backdropOpen();
+      } else {
+        this.backdropClose();
+      }
+    }
+  };
 
   ControlSidebar.prototype.toggle = function (event) {
     if (event) event.preventDefault();
@@ -393,8 +404,10 @@ throw new Error('AdminLTE requires jQuery')
 
     if (!$(Selector.sidebar).is(Selector.open) && !$('body').is(Selector.open)) {
       this.expand();
+      this.backdropToggle('expand');
     } else {
       this.collapse();
+      this.backdropToggle('collapse');
     }
   };
 
@@ -406,14 +419,12 @@ throw new Error('AdminLTE requires jQuery')
       $(Selector.sidebar).addClass(ClassName.open);
     }
     $(this.element).trigger($.Event(Event.expanded));
-    this.backdropOpen();
   };
 
   ControlSidebar.prototype.collapse = function () {
     $('body, ' + Selector.sidebar).removeClass(ClassName.open);
     $(Selector.sidebar).fadeOut();
     $(this.element).trigger($.Event(Event.collapsed));
-    this.backdropClose();
   };
 
   ControlSidebar.prototype.fix = function () {
@@ -997,6 +1008,7 @@ throw new Error('AdminLTE requires jQuery')
     mainHeader: '.main-header',
     sidebar: '.sidebar',
     controlSidebar: '.control-sidebar',
+    csOpen: '.control-sidebar-open',
     fixed: '.fixed',
     sidebarMenu: '.sidebar-menu',
     logo: '.main-header .logo'
@@ -1075,6 +1087,14 @@ throw new Error('AdminLTE requires jQuery')
   };
 
   Layout.prototype.fix = function () {
+    var bd = document.getElementsByClassName("control-sidebar-backdrop");
+    if ($(window).width() < 767 && $(Selector.controlSidebar).is(Selector.csOpen)) {
+      bd[0].style.zIndex = 999;
+      bd[0].style.opacity = 0.5;
+    } else {
+      bd[0].style.zIndex = -999;
+      bd[0].style.opacity = 0;
+    }
     // Remove overflow from .wrapper if layout-boxed exists
     $(Selector.layoutBoxed + ' > ' + Selector.wrapper).css('overflow', 'hidden');
 

@@ -58,17 +58,28 @@
     }.bind(this));
   };
 
-  ControlSidebar.prototype.backdropOpen = function () {
+  ControlSidebar.prototype.backdropOpen = function (event) {
     var bd = document.getElementsByClassName("control-sidebar-backdrop");
     bd[0].style.zIndex = 999;
     bd[0].style.opacity = 0.5;
   }
 
-  ControlSidebar.prototype.backdropClose = function () {
+  ControlSidebar.prototype.backdropClose = function (event) {
     var bd = document.getElementsByClassName("control-sidebar-backdrop");
     bd[0].style.zIndex = -999;
     bd[0].style.opacity = 0;
   }
+
+  ControlSidebar.prototype.backdropToggle = function (event) {
+
+    if ($(window).width() < 767) {
+      if (event == 'expand') {
+        this.backdropOpen();
+      } else {
+        this.backdropClose();
+      }
+    }
+  };
 
   ControlSidebar.prototype.toggle = function (event) {
     if (event) event.preventDefault();
@@ -76,8 +87,10 @@
 
     if (!$(Selector.sidebar).is(Selector.open) && !$('body').is(Selector.open)) {
       this.expand();
+      this.backdropToggle('expand');
     } else {
       this.collapse();
+      this.backdropToggle('collapse');
     }
   };
 
@@ -89,14 +102,12 @@
       $(Selector.sidebar).addClass(ClassName.open);
     }
     $(this.element).trigger($.Event(Event.expanded));
-    this.backdropOpen();
   };
 
   ControlSidebar.prototype.collapse = function () {
     $('body, ' + Selector.sidebar).removeClass(ClassName.open);
     $(Selector.sidebar).fadeOut();
     $(this.element).trigger($.Event(Event.collapsed));
-    this.backdropClose();
   };
 
   ControlSidebar.prototype.fix = function () {
