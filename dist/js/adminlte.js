@@ -323,7 +323,7 @@ throw new Error('AdminLTE requires jQuery')
  *         or add [data-toggle="control-sidebar"] to the trigger
  *         Pass any option as data-option="value"
  */
-+function ($) {
++ function ($) {
   'use strict';
 
   var DataKey = 'lte.controlsidebar';
@@ -334,29 +334,29 @@ throw new Error('AdminLTE requires jQuery')
 
   var Selector = {
     sidebar: '.control-sidebar',
-    data   : '[data-toggle="control-sidebar"]',
-    open   : '.control-sidebar-open',
-    bg     : '.control-sidebar-bg',
+    data: '[data-toggle="control-sidebar"]',
+    open: '.control-sidebar-open',
+    bg: '.control-sidebar-bg',
     wrapper: '.wrapper',
     content: '.content-wrapper',
-    boxed  : '.layout-boxed'
+    boxed: '.layout-boxed'
   };
 
   var ClassName = {
-    open : 'control-sidebar-open',
+    open: 'control-sidebar-open',
     fixed: 'fixed'
   };
 
   var Event = {
     collapsed: 'collapsed.controlsidebar',
-    expanded : 'expanded.controlsidebar'
+    expanded: 'expanded.controlsidebar'
   };
 
   // ControlSidebar Class Definition
   // ===============================
   var ControlSidebar = function (element, options) {
-    this.element         = element;
-    this.options         = options;
+    this.element = element;
+    this.options = options;
     this.hasBindedResize = false;
 
     this.init();
@@ -375,9 +375,20 @@ throw new Error('AdminLTE requires jQuery')
     }.bind(this));
   };
 
+  ControlSidebar.prototype.backdropOpen = function () {
+    var bd = document.getElementsByClassName("control-sidebar-backdrop");
+    bd[0].style.zIndex = 999;
+    bd[0].style.opacity = 0.5;
+  }
+
+  ControlSidebar.prototype.backdropClose = function () {
+    var bd = document.getElementsByClassName("control-sidebar-backdrop");
+    bd[0].style.zIndex = -999;
+    bd[0].style.opacity = 0;
+  }
+
   ControlSidebar.prototype.toggle = function (event) {
     if (event) event.preventDefault();
-
     this.fix();
 
     if (!$(Selector.sidebar).is(Selector.open) && !$('body').is(Selector.open)) {
@@ -394,15 +405,15 @@ throw new Error('AdminLTE requires jQuery')
     } else {
       $(Selector.sidebar).addClass(ClassName.open);
     }
-
-
     $(this.element).trigger($.Event(Event.expanded));
+    this.backdropOpen();
   };
 
   ControlSidebar.prototype.collapse = function () {
     $('body, ' + Selector.sidebar).removeClass(ClassName.open);
     $(Selector.sidebar).fadeOut();
     $(this.element).trigger($.Event(Event.collapsed));
+    this.backdropClose();
   };
 
   ControlSidebar.prototype.fix = function () {
@@ -416,7 +427,7 @@ throw new Error('AdminLTE requires jQuery')
   ControlSidebar.prototype._fixForBoxed = function (bg) {
     bg.css({
       position: 'absolute',
-      height  : $(Selector.wrapper).height()
+      height: $(Selector.wrapper).height()
     });
   };
 
@@ -425,7 +436,7 @@ throw new Error('AdminLTE requires jQuery')
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this);
-      var data  = $this.data(DataKey);
+      var data = $this.data(DataKey);
 
       if (!data) {
         var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option);
@@ -438,7 +449,7 @@ throw new Error('AdminLTE requires jQuery')
 
   var old = $.fn.controlSidebar;
 
-  $.fn.controlSidebar             = Plugin;
+  $.fn.controlSidebar = Plugin;
   $.fn.controlSidebar.Constructor = ControlSidebar;
 
   // No Conflict Mode
@@ -456,7 +467,6 @@ throw new Error('AdminLTE requires jQuery')
   });
 
 }(jQuery);
-
 
 /* DirectChat()
  * ===============
