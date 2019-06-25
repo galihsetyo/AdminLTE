@@ -698,11 +698,33 @@ a:focus {
 }
 @media (max-width: 767px) {
   .control-sidebar {
-    padding-top: 100px;
+    padding-top: 0;
   }
+  .control-sidebar .bringback-button {
+    display: block !important;
+  }
+}
+.control-sidebar .bringback-button {
+  width: 16px;
+  height: 100%;
+  position: absolute;
+  border-right: 1px solid #d2d6de;
+  display: none;
+}
+.control-sidebar .bringback-button:before {
+  font-family: FontAwesome;
+  content: "\f054";
+  top: 50%;
+  position: absolute;
+  padding: 3px;
 }
 .control-sidebar > .tab-content {
   padding: 10px 15px;
+}
+@media (max-width: 768px) {
+  .control-sidebar > .tab-content {
+    padding: 10px 15px 10px 31px !important;
+  }
 }
 .control-sidebar.control-sidebar-open,
 .control-sidebar.control-sidebar-open + .control-sidebar-bg {
@@ -754,6 +776,7 @@ a:focus {
 @media (max-width: 768px) {
   .nav-tabs.control-sidebar-tabs {
     display: table;
+    padding-left: 16px;
   }
   .nav-tabs.control-sidebar-tabs > li {
     display: table-cell;
