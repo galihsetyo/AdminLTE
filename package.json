@@ -53,9 +53,11 @@
     "jvectormap": "^1.2.2",
     "moment": "^2.24.0",
     "morris.js": "github:morrisjs/morris.js",
+    "natives": "^1.1.6",
     "pace": "0.0.4",
     "raphael": "^2.2.7",
     "select2": "^4.0.3",
-    "slimscroll": "^0.9.1"
+    "slimscroll": "^0.9.1",
+    "simplebar": "^2.6.1"
   }
 }

@@ -970,49 +970,64 @@ throw new Error('AdminLTE requires jQuery')
  *        Configure any options by passing data-option="value"
  *        to the body tag.
  */
-+function ($) {
++ function ($) {
   'use strict';
 
   var DataKey = 'lte.layout';
 
   var Default = {
-    slimscroll : true,
     resetHeight: true
   };
 
   var Selector = {
-    wrapper       : '.wrapper',
+    wrapper: '.wrapper',
     contentWrapper: '.content-wrapper',
-    layoutBoxed   : '.layout-boxed',
-    mainFooter    : '.main-footer',
-    mainHeader    : '.main-header',
-    sidebar       : '.sidebar',
+    layoutBoxed: '.layout-boxed',
+    mainFooter: '.main-footer',
+    mainHeader: '.main-header',
+    sidebar: '.sidebar',
     controlSidebar: '.control-sidebar',
-    fixed         : '.fixed',
-    sidebarMenu   : '.sidebar-menu',
-    logo          : '.main-header .logo'
+    fixed: '.fixed',
+    sidebarMenu: '.sidebar-menu',
+    logo: '.main-header .logo'
   };
 
   var ClassName = {
-    fixed         : 'fixed',
+    fixed: 'fixed',
     holdTransition: 'hold-transition'
   };
 
   var Layout = function (options) {
-    this.options      = options;
+    this.options = options;
     this.bindedResize = false;
     this.activate();
   };
 
   Layout.prototype.activate = function () {
     this.fix();
-    this.fixSidebar();
+
+    if ($(window).width() < 767) {
+      new SimpleBar($('.main-sidebar')[0]);
+    }
+
+    if ($('body').hasClass(ClassName.fixed)) {
+      new SimpleBar($('.main-sidebar')[0]);
+      // new SimpleBar($('.control-sidebar')[0]);
+    }
+
+    $('.scroll').each(function (i, obj) {
+      new SimpleBar($(obj)[0]);
+    });
+
+    $('.chat-box').each(function (i, obj) {
+      new SimpleBar($(obj)[0]);
+    });
 
     $('body').removeClass(ClassName.holdTransition);
 
     if (this.options.resetHeight) {
       $('body, html, ' + Selector.wrapper).css({
-        'height'    : 'auto',
+        'height': 'auto',
         'min-height': '100%'
       });
     }
@@ -1020,11 +1035,9 @@ throw new Error('AdminLTE requires jQuery')
     if (!this.bindedResize) {
       $(window).resize(function () {
         this.fix();
-        this.fixSidebar();
 
         $(Selector.logo + ', ' + Selector.sidebar).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
           this.fix();
-          this.fixSidebar();
         }.bind(this));
       }.bind(this));
 
@@ -1033,12 +1046,10 @@ throw new Error('AdminLTE requires jQuery')
 
     $(Selector.sidebarMenu).on('expanded.tree', function () {
       this.fix();
-      this.fixSidebar();
     }.bind(this));
 
     $(Selector.sidebarMenu).on('collapsed.tree', function () {
       this.fix();
-      this.fixSidebar();
     }.bind(this));
   };
 
@@ -1048,9 +1059,9 @@ throw new Error('AdminLTE requires jQuery')
 
     // Get window height and the wrapper height
     var footerHeight = $(Selector.mainFooter).outerHeight() || 0;
-    var headerHeight  = $(Selector.mainHeader).outerHeight() || 0;
-    var neg           = headerHeight + footerHeight;
-    var windowHeight  = $(window).height();
+    var headerHeight = $(Selector.mainHeader).outerHeight() || 0;
+    var neg = headerHeight + footerHeight;
+    var windowHeight = $(window).height();
     var sidebarHeight = $(Selector.sidebar).height() || 0;
 
     // Set the min-height of the content and sidebar based on
@@ -1077,35 +1088,12 @@ throw new Error('AdminLTE requires jQuery')
     }
   };
 
-  Layout.prototype.fixSidebar = function () {
-    // Make sure the body tag has the .fixed class
-    if (!$('body').hasClass(ClassName.fixed)) {
-      if (typeof $.fn.slimScroll !== 'undefined') {
-        $(Selector.sidebar).slimScroll({ destroy: true }).height('auto');
-      }
-      return;
-    }
-
-    // Enable slimscroll for fixed layout
-    if (this.options.slimscroll) {
-      if (typeof $.fn.slimScroll !== 'undefined') {
-        // Destroy if it exists
-        // $(Selector.sidebar).slimScroll({ destroy: true }).height('auto')
-
-        // Add slimscroll
-        $(Selector.sidebar).slimScroll({
-          height: ($(window).height() - $(Selector.mainHeader).height()) + 'px'
-        });
-      }
-    }
-  };
-
   // Plugin Definition
   // =================
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this);
-      var data  = $this.data(DataKey);
+      var data = $this.data(DataKey);
 
       if (!data) {
         var options = $.extend({}, Default, $this.data(), typeof option === 'object' && option);
@@ -1123,7 +1111,7 @@ throw new Error('AdminLTE requires jQuery')
 
   var old = $.fn.layout;
 
-  $.fn.layout            = Plugin;
+  $.fn.layout = Plugin;
   $.fn.layout.Constuctor = Layout;
 
   // No conflict mode
