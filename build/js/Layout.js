@@ -50,7 +50,7 @@
       elementMaxWidth: 0.72, // *100%
       sideHookWidth: 40, //px
       moveSpeed: 0.3,
-      opacityBackground: 0.4,
+      opacityBackground: 0.6,
       shiftForStart: 90,
       windowMaxWidth: 768,
     });
