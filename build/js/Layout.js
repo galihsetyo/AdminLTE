@@ -61,7 +61,7 @@
 
     if ($('body').hasClass(ClassName.fixed)) {
       new SimpleBar($('.main-sidebar')[0]);
-      // new SimpleBar($('.control-sidebar')[0]);
+      new SimpleBar($('.control-sidebar')[0]);
     }
 
     $('.scroll').each(function (i, obj) {

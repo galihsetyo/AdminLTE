@@ -734,25 +734,24 @@ a:focus {
   }
 }
 .control-sidebar .bringback-button {
-  width: 16px;
-  height: 100%;
-  position: absolute;
-  border-right: 1px solid #d2d6de;
+  width: 20px;
+  height: 100vh;
+  position: fixed;
   display: none;
 }
 .control-sidebar .bringback-button:before {
   font-family: FontAwesome;
   content: "\f054";
-  top: 50%;
+  top: 43%;
   position: absolute;
-  padding: 3px;
+  padding: 5px;
 }
-.control-sidebar > .tab-content {
+.control-sidebar .tab-content {
   padding: 10px 15px;
 }
 @media (max-width: 768px) {
-  .control-sidebar > .tab-content {
-    padding: 10px 15px 10px 31px !important;
+  .control-sidebar .tab-content {
+    padding: 10px 15px 10px 35px !important;
   }
 }
 .control-sidebar.control-sidebar-open,
@@ -786,7 +785,7 @@ a:focus {
 }
 .fixed .control-sidebar {
   position: fixed;
-  height: 100%;
+  height: 100vh;
   overflow-y: auto;
   padding-bottom: 50px;
 }
@@ -819,7 +818,7 @@ a:focus {
 @media (max-width: 768px) {
   .nav-tabs.control-sidebar-tabs {
     display: table;
-    padding-left: 16px;
+    padding-left: 20px;
   }
   .nav-tabs.control-sidebar-tabs > li {
     display: table-cell;
@@ -923,6 +922,10 @@ a:focus {
 .control-sidebar-dark .control-sidebar-menu > li > a .menu-info > p {
   color: #b8c7ce;
 }
+.control-sidebar-dark .bringback-button {
+  border-right: 1px solid #141a1d;
+  background-color: #29363c;
+}
 .control-sidebar-light {
   color: #5e5e5e;
 }
@@ -968,6 +971,10 @@ a:focus {
 }
 .control-sidebar-light .control-sidebar-menu > li > a .menu-info > p {
   color: #5e5e5e;
+}
+.control-sidebar-light .bringback-button {
+  border-right: 1px solid #d2d6de;
+  background-color: #eef1f6;
 }
 /*
  * Component: Dropdown menus

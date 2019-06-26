@@ -34,27 +34,26 @@
   }
 
   .bringback-button {
-    width: 16px;
-    height: 100%;
-    position: absolute;
-    border-right: 1px solid @gray-lte;
+    width: 20px;
+    height: 100vh;
+    position: fixed;
     display: none;
 
     &:before {
       font-family: FontAwesome;
       content: "\f054";
-      top: 50%;
+      top: 43%;
       position: absolute;
-      padding: 3px;
+      padding: 5px;
     }
   }
 
   // Tab panes
-  >.tab-content {
+  .tab-content {
     padding: 10px 15px;
 
     @media (max-width: @screen-sm) {
-      padding: 10px 15px 10px 31px !important;
+      padding: 10px 15px 10px 35px !important;
     }
   }
 
@@ -105,7 +104,7 @@
 .fixed {
   .control-sidebar {
     position: fixed;
-    height: 100%;
+    height: 100vh;
     overflow-y: auto;
     padding-bottom: 50px;
   }
@@ -159,7 +158,7 @@
   // Remove responsiveness on small screens
   @media (max-width: @screen-sm) {
     display: table;
-    padding-left: 16px;
+    padding-left: 20px;
 
     >li {
       display: table-cell;
@@ -302,6 +301,11 @@
       }
     }
   }
+
+  .bringback-button {
+    border-right: 1px solid darken(@sidebar-dark-bg, 7%);
+    background-color: #29363c;
+  }
 }
 
 // Light skin
@@ -378,5 +382,10 @@
         }
       }
     }
+  }
+
+  .bringback-button {
+    border-right: 1px solid @gray-lte;
+    background-color: #eef1f6;
   }
 }
