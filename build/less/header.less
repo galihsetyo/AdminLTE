@@ -5,8 +5,9 @@
 
 .main-header {
   position: relative;
-  max-height: 100px;
+  max-height: @navbar-height;
   z-index: 1030;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 
   //Navbar
   .navbar {
@@ -14,7 +15,7 @@
     margin-bottom: 0;
     margin-left: @sidebar-width;
     border: none;
-    min-height: @navbar-height;
+    max-height: @navbar-height;
     border-radius: 0;
 
     .layout-top-nav & {
@@ -84,9 +85,10 @@
     float: left;
     background-color: transparent;
     background-image: none;
-    padding: @navbar-padding-vertical @navbar-padding-horizontal;
+    padding: (@navbar-padding-vertical - 1) @navbar-padding-horizontal;
     //Add the fontawesome bars icon
     font-family: fontAwesome;
+    font-size: 16px;
 
     &:before {
       content: "\f0c9";
@@ -119,7 +121,7 @@
   //Labels in navbar
   .navbar .nav>li>a>.label {
     position: absolute;
-    top: 9px;
+    top: (@navbar-padding-vertical - 5);
     right: 7px;
     text-align: center;
     font-size: 9px;
@@ -134,7 +136,7 @@
     float: left;
     height: @navbar-height;
     font-size: 20px;
-    line-height: 50px;
+    line-height: @navbar-height;
     text-align: center;
     width: @sidebar-width;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -231,8 +233,14 @@
   padding: @navbar-padding-vertical @navbar-padding-horizontal;
 }
 
+.navbar-custom-menu .navbar-nav>li>a {
+  padding-top: @navbar-padding-vertical  !important;
+  padding-bottom: @navbar-padding-vertical  !important;
+  font-size: 16px;
+}
+
 //Control navbar scaffolding on x-small screens
-@media (max-width: @screen-sm-max) {
+@media (max-width: @screen-xs-max) {
   .navbar-custom-menu .navbar-nav>li {
     float: left;
   }
@@ -244,9 +252,8 @@
   }
 
   .navbar-custom-menu .navbar-nav>li>a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    line-height: 20px;
+    padding-top: @navbar-padding-vertical  !important;
+    padding-bottom: @navbar-padding-vertical  !important;
   }
 }
 
@@ -255,7 +262,10 @@
   .main-header {
     position: relative;
 
-    .logo,
+    .logo {
+      display: none;
+    }
+
     .navbar {
       width: 100%;
       float: none;
@@ -267,6 +277,11 @@
 
     .navbar-custom-menu {
       float: right;
+      padding-right: 10px;
+    }
+
+    .sidebar-toggle {
+      padding: 25px 25px;
     }
   }
 }

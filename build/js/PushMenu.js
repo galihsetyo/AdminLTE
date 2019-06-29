@@ -14,7 +14,7 @@
   var Default = {
     collapseScreenSize: 767,
     expandOnHover: false,
-    expandTransitionDelay: 50
+    expandTransitionDelay: 30
   };
 
   var Selector = {
@@ -167,7 +167,9 @@
   // ========
   $(document).on('click', Selector.button, function (e) {
     e.preventDefault();
-    Plugin.call($(this), 'toggle');
+    if ($(window).width() > 767) {
+      Plugin.call($(this), 'toggle');
+    }
   });
   $(window).on('load', function () {
     Plugin.call($(Selector.button));

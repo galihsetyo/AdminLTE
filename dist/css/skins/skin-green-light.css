@@ -3,7 +3,7 @@
  * -----------
  */
 .skin-green-light .main-header .navbar {
-  background-color: #00a65a;
+  background-color: #4caf50;
 }
 .skin-green-light .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -15,7 +15,7 @@
 .skin-green-light .main-header .navbar .nav .open > a:hover,
 .skin-green-light .main-header .navbar .nav .open > a:focus,
 .skin-green-light .main-header .navbar .nav > .active > a {
-  background: rgba(0, 0, 0, 0.1);
+  background: #449d48;
   color: #f6f6f6;
 }
 .skin-green-light .main-header .navbar .sidebar-toggle {
@@ -23,13 +23,13 @@
 }
 .skin-green-light .main-header .navbar .sidebar-toggle:hover {
   color: #f6f6f6;
-  background: rgba(0, 0, 0, 0.1);
+  background: #449d48;
 }
 .skin-green-light .main-header .navbar .sidebar-toggle {
   color: #fff;
 }
 .skin-green-light .main-header .navbar .sidebar-toggle:hover {
-  background-color: #008d4c;
+  background-color: #449d48;
 }
 @media (max-width: 767px) {
   .skin-green-light .main-header .navbar .dropdown-menu li.divider {
@@ -39,19 +39,19 @@
     color: #fff;
   }
   .skin-green-light .main-header .navbar .dropdown-menu li a:hover {
-    background: #008d4c;
+    background: #449d48;
   }
 }
 .skin-green-light .main-header .logo {
-  background-color: #00a65a;
+  background-color: #4caf50;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
 .skin-green-light .main-header .logo:hover {
-  background-color: #00a157;
+  background-color: #4aab4e;
 }
 .skin-green-light .main-header li.user-header {
-  background-color: #00a65a;
+  background-color: #4caf50;
 }
 .skin-green-light .content-header {
   background: transparent;
@@ -87,7 +87,7 @@
   background: #f4f4f5;
 }
 .skin-green-light .sidebar-menu > li.active {
-  border-left-color: #00a65a;
+  border-left-color: #4caf50;
 }
 .skin-green-light .sidebar-menu > li.active > a {
   font-weight: 600;
@@ -100,6 +100,9 @@
 }
 .skin-green-light .sidebar a:hover {
   text-decoration: none;
+}
+.skin-green-light .sidebar .sidebar-logo {
+  color: #444444;
 }
 .skin-green-light .sidebar-menu .treeview-menu > li > a {
   color: #777777;

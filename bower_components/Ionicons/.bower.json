@@ -1,23 +1,17 @@
 {
-  "ignore": [
-    "**/.*",
-    "builder",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "version": "2.0.1",
-  "name": "Ionicons",
-  "license": "MIT",
-  "authors": [
-    "Ben Sperry <ben@drifty.com>",
-    "Adam Bradley <adam@drifty.com>",
-    "Max Lynch <max@drifty.com>"
-  ],
-  "keywords": [
-    "fonts",
-    "icon font",
+  "name": "ionicons",
+  "homepage": "https://github.com/driftyco/ionicons",
+  "version": "4.5.10-2",
+  "_release": "4.5.10-2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.5.10-2",
+    "commit": "08a164bae739592935de00261fcdfec58ea8510f"
+  },
+  "_source": "https://github.com/driftyco/ionicons.git",
+  "_target": "4.5.10-2"
+} "icon font",
     "icons",
     "ionic",
     "web font"
@@ -35,6 +29,5 @@
     "commit": "ecb4b806831005c25b97ed9089fbb1d7dcc0879c"
   },
   "_source": "https://github.com/driftyco/ionicons.git",
-  "_target": "^2.0.1",
-  "_originalSource": "ionicons"
+  "_target": "2.0.1"
 }

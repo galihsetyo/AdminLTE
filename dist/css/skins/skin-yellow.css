@@ -3,7 +3,7 @@
  * ------------
  */
 .skin-yellow .main-header .navbar {
-  background-color: #f39c12;
+  background-color: #ffa000;
 }
 .skin-yellow .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -15,7 +15,7 @@
 .skin-yellow .main-header .navbar .nav .open > a:hover,
 .skin-yellow .main-header .navbar .nav .open > a:focus,
 .skin-yellow .main-header .navbar .nav > .active > a {
-  background: rgba(0, 0, 0, 0.1);
+  background: #e69000;
   color: #f6f6f6;
 }
 .skin-yellow .main-header .navbar .sidebar-toggle {
@@ -23,13 +23,13 @@
 }
 .skin-yellow .main-header .navbar .sidebar-toggle:hover {
   color: #f6f6f6;
-  background: rgba(0, 0, 0, 0.1);
+  background: #e69000;
 }
 .skin-yellow .main-header .navbar .sidebar-toggle {
   color: #fff;
 }
 .skin-yellow .main-header .navbar .sidebar-toggle:hover {
-  background-color: #e08e0b;
+  background-color: #e69000;
 }
 @media (max-width: 767px) {
   .skin-yellow .main-header .navbar .dropdown-menu li.divider {
@@ -39,19 +39,19 @@
     color: #fff;
   }
   .skin-yellow .main-header .navbar .dropdown-menu li a:hover {
-    background: #e08e0b;
+    background: #e69000;
   }
 }
 .skin-yellow .main-header .logo {
-  background-color: #e08e0b;
+  background-color: #e69000;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
 .skin-yellow .main-header .logo:hover {
-  background-color: #db8b0b;
+  background-color: #e08d00;
 }
 .skin-yellow .main-header li.user-header {
-  background-color: #f39c12;
+  background-color: #ffa000;
 }
 .skin-yellow .content-header {
   background: transparent;
@@ -79,17 +79,20 @@
   background: #1e282c;
 }
 .skin-yellow .sidebar-menu > li.active > a {
-  border-left-color: #f39c12;
+  border-left-color: #ffa000;
 }
 .skin-yellow .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
   background: #2c3b41;
 }
 .skin-yellow .sidebar a {
-  color: #b8c7ce;
+  color: #ececed;
 }
 .skin-yellow .sidebar a:hover {
   text-decoration: none;
+}
+.skin-yellow .sidebar .sidebar-logo {
+  color: #ececed;
 }
 .skin-yellow .sidebar-menu .treeview-menu > li > a {
   color: #8aa4af;

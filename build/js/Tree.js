@@ -7,26 +7,26 @@
  *         or add [data-widget="tree"] to the ul element
  *         Pass any option as data-option="value"
  */
-+function ($) {
++ function ($) {
   'use strict';
 
   var DataKey = 'lte.tree';
 
   var Default = {
-    animationSpeed: 500,
-    accordion     : true,
-    followLink    : false,
-    trigger       : '.treeview a'
+    animationSpeed: 300,
+    accordion: true,
+    followLink: false,
+    trigger: '.treeview a'
   };
 
   var Selector = {
-    tree        : '.tree',
-    treeview    : '.treeview',
+    tree: '.tree',
+    treeview: '.treeview',
     treeviewMenu: '.treeview-menu',
-    open        : '.menu-open, .active',
-    li          : 'li',
-    data        : '[data-widget="tree"]',
-    active      : '.active'
+    open: '.menu-open, .active',
+    li: 'li',
+    data: '[data-widget="tree"]',
+    active: '.active'
   };
 
   var ClassName = {
@@ -36,7 +36,7 @@
 
   var Event = {
     collapsed: 'collapsed.tree',
-    expanded : 'expanded.tree'
+    expanded: 'expanded.tree'
   };
 
   // Tree Class Definition
@@ -54,8 +54,8 @@
 
   Tree.prototype.toggle = function (link, event) {
     var treeviewMenu = link.next(Selector.treeviewMenu);
-    var parentLi     = link.parent();
-    var isOpen       = parentLi.hasClass(ClassName.open);
+    var parentLi = link.parent();
+    var isOpen = parentLi.hasClass(ClassName.open);
 
     if (!parentLi.is(Selector.treeview)) {
       return;
@@ -77,7 +77,7 @@
 
     if (this.options.accordion) {
       var openMenuLi = parent.siblings(Selector.open);
-      var openTree   = openMenuLi.children(Selector.treeviewMenu);
+      var openTree = openMenuLi.children(Selector.treeviewMenu);
       this.collapse(openTree, openMenuLi);
     }
 
@@ -113,7 +113,7 @@
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this);
-      var data  = $this.data(DataKey);
+      var data = $this.data(DataKey);
 
       if (!data) {
         var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option);
@@ -124,7 +124,7 @@
 
   var old = $.fn.tree;
 
-  $.fn.tree             = Plugin;
+  $.fn.tree = Plugin;
   $.fn.tree.Constructor = Tree;
 
   // No Conflict Mode

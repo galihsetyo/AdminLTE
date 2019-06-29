@@ -6,27 +6,27 @@
  *         This plugin auto activates on any element using the `.box` class
  *         Pass any option as data-option="value"
  */
-+function ($) {
++ function ($) {
   'use strict';
 
   var DataKey = 'lte.boxwidget';
 
   var Default = {
-    animationSpeed : 500,
+    animationSpeed: 500,
     collapseTrigger: '[data-widget="collapse"]',
-    removeTrigger  : '[data-widget="remove"]',
-    collapseIcon   : 'fa-minus',
-    expandIcon     : 'fa-plus',
-    removeIcon     : 'fa-times'
+    removeTrigger: '[data-widget="remove"]',
+    collapseIcon: 'fa-minus',
+    expandIcon: 'fa-plus',
+    removeIcon: 'fa-times'
   };
 
   var Selector = {
-    data     : '.box',
+    data: '.box',
     collapsed: '.collapsed-box',
-    header   : '.box-header',
-    body     : '.box-body',
-    footer   : '.box-footer',
-    tools    : '.box-tools'
+    header: '.box-header',
+    body: '.box-body',
+    footer: '.box-footer',
+    tools: '.box-tools'
   };
 
   var ClassName = {
@@ -34,13 +34,13 @@
   };
 
   var Event = {
-        collapsing: 'collapsing.boxwidget',
-        collapsed: 'collapsed.boxwidget',
-        expanding: 'expanding.boxwidget',
-        expanded: 'expanded.boxwidget',
-        removing: 'removing.boxwidget',
-        removed: 'removed.boxwidget'        
-    };
+    collapsing: 'collapsing.boxwidget',
+    collapsed: 'collapsed.boxwidget',
+    expanding: 'expanding.boxwidget',
+    expanded: 'expanded.boxwidget',
+    removing: 'removing.boxwidget',
+    removed: 'removed.boxwidget'
+  };
 
   // BoxWidget Class Definition
   // =====================
@@ -64,8 +64,8 @@
   BoxWidget.prototype.expand = function () {
     var expandedEvent = $.Event(Event.expanded);
     var expandingEvent = $.Event(Event.expanding);
-    var collapseIcon  = this.options.collapseIcon;
-    var expandIcon    = this.options.expandIcon;
+    var collapseIcon = this.options.collapseIcon;
+    var expandIcon = this.options.expandIcon;
 
     $(this.element).removeClass(ClassName.collapsed);
 
@@ -86,8 +86,8 @@
   BoxWidget.prototype.collapse = function () {
     var collapsedEvent = $.Event(Event.collapsed);
     var collapsingEvent = $.Event(Event.collapsing);
-    var collapseIcon   = this.options.collapseIcon;
-    var expandIcon     = this.options.expandIcon;
+    var collapseIcon = this.options.collapseIcon;
+    var expandIcon = this.options.expandIcon;
 
     $(this.element)
       .children(Selector.header + ', ' + Selector.body + ', ' + Selector.footer)
@@ -109,10 +109,10 @@
     var removingEvent = $.Event(Event.removing);
 
     $(this.element).slideUp(this.options.animationSpeed, function () {
-      $(this.element).trigger(removedEvent);
-      $(this.element).remove();
-    }.bind(this))
-    .trigger(removingEvent);
+        $(this.element).trigger(removedEvent);
+        $(this.element).remove();
+      }.bind(this))
+      .trigger(removingEvent);
   };
 
   // Private
@@ -138,7 +138,7 @@
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this);
-      var data  = $this.data(DataKey);
+      var data = $this.data(DataKey);
 
       if (!data) {
         var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option);
@@ -156,7 +156,7 @@
 
   var old = $.fn.boxWidget;
 
-  $.fn.boxWidget             = Plugin;
+  $.fn.boxWidget = Plugin;
   $.fn.boxWidget.Constructor = BoxWidget;
 
   // No Conflict Mode

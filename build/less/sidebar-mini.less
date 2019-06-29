@@ -29,10 +29,16 @@
 
       .sidebar-menu {
         >li {
+          &.header {
+            padding: 10px 25px 10px 14px;
+          }
+
           position: relative;
 
           >a {
             margin-right: 0;
+            padding: 14px 5px 14px 12px;
+            transition: padding-left .3s linear;
           }
 
           >a>span {
@@ -142,7 +148,7 @@
       >a>span {
         top: 0;
         margin-left: -3px;
-        padding: 12px 5px 12px 20px;
+        padding: 14px 5px 14px 20px;
         background-color: inherit;
       }
 
@@ -151,8 +157,8 @@
         position: relative !important;
         float: right;
         width: auto !important;
-        left: 200px - 20px !important;
-        top: -22px !important;
+        left: 245px !important;
+        top: -24px !important;
         z-index: 900;
 
         >.label:not(:first-of-type) {
@@ -161,7 +167,7 @@
       }
 
       >.treeview-menu {
-        top: 44px;
+        top: 47px;
         margin-left: 0;
       }
     }
@@ -203,14 +209,14 @@
 
   >.pull-right-container {
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 50%;
     margin-top: -7px;
   }
 
   >.sidebar-menu-text {
     .transition(opacity 0.2s ease 0s);
-    padding-left: 9px;
+    padding-left: 18px;
     opacity: 1;
   }
 }

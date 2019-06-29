@@ -145,27 +145,27 @@ throw new Error('AdminLTE requires jQuery')
  *         This plugin auto activates on any element using the `.box` class
  *         Pass any option as data-option="value"
  */
-+function ($) {
++ function ($) {
   'use strict';
 
   var DataKey = 'lte.boxwidget';
 
   var Default = {
-    animationSpeed : 500,
+    animationSpeed: 500,
     collapseTrigger: '[data-widget="collapse"]',
-    removeTrigger  : '[data-widget="remove"]',
-    collapseIcon   : 'fa-minus',
-    expandIcon     : 'fa-plus',
-    removeIcon     : 'fa-times'
+    removeTrigger: '[data-widget="remove"]',
+    collapseIcon: 'fa-minus',
+    expandIcon: 'fa-plus',
+    removeIcon: 'fa-times'
   };
 
   var Selector = {
-    data     : '.box',
+    data: '.box',
     collapsed: '.collapsed-box',
-    header   : '.box-header',
-    body     : '.box-body',
-    footer   : '.box-footer',
-    tools    : '.box-tools'
+    header: '.box-header',
+    body: '.box-body',
+    footer: '.box-footer',
+    tools: '.box-tools'
   };
 
   var ClassName = {
@@ -173,13 +173,13 @@ throw new Error('AdminLTE requires jQuery')
   };
 
   var Event = {
-        collapsing: 'collapsing.boxwidget',
-        collapsed: 'collapsed.boxwidget',
-        expanding: 'expanding.boxwidget',
-        expanded: 'expanded.boxwidget',
-        removing: 'removing.boxwidget',
-        removed: 'removed.boxwidget'        
-    };
+    collapsing: 'collapsing.boxwidget',
+    collapsed: 'collapsed.boxwidget',
+    expanding: 'expanding.boxwidget',
+    expanded: 'expanded.boxwidget',
+    removing: 'removing.boxwidget',
+    removed: 'removed.boxwidget'
+  };
 
   // BoxWidget Class Definition
   // =====================
@@ -203,8 +203,8 @@ throw new Error('AdminLTE requires jQuery')
   BoxWidget.prototype.expand = function () {
     var expandedEvent = $.Event(Event.expanded);
     var expandingEvent = $.Event(Event.expanding);
-    var collapseIcon  = this.options.collapseIcon;
-    var expandIcon    = this.options.expandIcon;
+    var collapseIcon = this.options.collapseIcon;
+    var expandIcon = this.options.expandIcon;
 
     $(this.element).removeClass(ClassName.collapsed);
 
@@ -225,8 +225,8 @@ throw new Error('AdminLTE requires jQuery')
   BoxWidget.prototype.collapse = function () {
     var collapsedEvent = $.Event(Event.collapsed);
     var collapsingEvent = $.Event(Event.collapsing);
-    var collapseIcon   = this.options.collapseIcon;
-    var expandIcon     = this.options.expandIcon;
+    var collapseIcon = this.options.collapseIcon;
+    var expandIcon = this.options.expandIcon;
 
     $(this.element)
       .children(Selector.header + ', ' + Selector.body + ', ' + Selector.footer)
@@ -248,10 +248,10 @@ throw new Error('AdminLTE requires jQuery')
     var removingEvent = $.Event(Event.removing);
 
     $(this.element).slideUp(this.options.animationSpeed, function () {
-      $(this.element).trigger(removedEvent);
-      $(this.element).remove();
-    }.bind(this))
-    .trigger(removingEvent);
+        $(this.element).trigger(removedEvent);
+        $(this.element).remove();
+      }.bind(this))
+      .trigger(removingEvent);
   };
 
   // Private
@@ -277,7 +277,7 @@ throw new Error('AdminLTE requires jQuery')
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this);
-      var data  = $this.data(DataKey);
+      var data = $this.data(DataKey);
 
       if (!data) {
         var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option);
@@ -295,7 +295,7 @@ throw new Error('AdminLTE requires jQuery')
 
   var old = $.fn.boxWidget;
 
-  $.fn.boxWidget             = Plugin;
+  $.fn.boxWidget = Plugin;
   $.fn.boxWidget.Constructor = BoxWidget;
 
   // No Conflict Mode
@@ -313,7 +313,6 @@ throw new Error('AdminLTE requires jQuery')
     });
   });
 }(jQuery);
-
 
 /* ControlSidebar()
  * ===============
@@ -563,7 +562,7 @@ throw new Error('AdminLTE requires jQuery')
   var Default = {
     collapseScreenSize: 767,
     expandOnHover: false,
-    expandTransitionDelay: 50
+    expandTransitionDelay: 30
   };
 
   var Selector = {
@@ -716,7 +715,9 @@ throw new Error('AdminLTE requires jQuery')
   // ========
   $(document).on('click', Selector.button, function (e) {
     e.preventDefault();
-    Plugin.call($(this), 'toggle');
+    if ($(window).width() > 767) {
+      Plugin.call($(this), 'toggle');
+    }
   });
   $(window).on('load', function () {
     Plugin.call($(Selector.button));
@@ -842,26 +843,26 @@ throw new Error('AdminLTE requires jQuery')
  *         or add [data-widget="tree"] to the ul element
  *         Pass any option as data-option="value"
  */
-+function ($) {
++ function ($) {
   'use strict';
 
   var DataKey = 'lte.tree';
 
   var Default = {
-    animationSpeed: 500,
-    accordion     : true,
-    followLink    : false,
-    trigger       : '.treeview a'
+    animationSpeed: 300,
+    accordion: true,
+    followLink: false,
+    trigger: '.treeview a'
   };
 
   var Selector = {
-    tree        : '.tree',
-    treeview    : '.treeview',
+    tree: '.tree',
+    treeview: '.treeview',
     treeviewMenu: '.treeview-menu',
-    open        : '.menu-open, .active',
-    li          : 'li',
-    data        : '[data-widget="tree"]',
-    active      : '.active'
+    open: '.menu-open, .active',
+    li: 'li',
+    data: '[data-widget="tree"]',
+    active: '.active'
   };
 
   var ClassName = {
@@ -871,7 +872,7 @@ throw new Error('AdminLTE requires jQuery')
 
   var Event = {
     collapsed: 'collapsed.tree',
-    expanded : 'expanded.tree'
+    expanded: 'expanded.tree'
   };
 
   // Tree Class Definition
@@ -889,8 +890,8 @@ throw new Error('AdminLTE requires jQuery')
 
   Tree.prototype.toggle = function (link, event) {
     var treeviewMenu = link.next(Selector.treeviewMenu);
-    var parentLi     = link.parent();
-    var isOpen       = parentLi.hasClass(ClassName.open);
+    var parentLi = link.parent();
+    var isOpen = parentLi.hasClass(ClassName.open);
 
     if (!parentLi.is(Selector.treeview)) {
       return;
@@ -912,7 +913,7 @@ throw new Error('AdminLTE requires jQuery')
 
     if (this.options.accordion) {
       var openMenuLi = parent.siblings(Selector.open);
-      var openTree   = openMenuLi.children(Selector.treeviewMenu);
+      var openTree = openMenuLi.children(Selector.treeviewMenu);
       this.collapse(openTree, openMenuLi);
     }
 
@@ -948,7 +949,7 @@ throw new Error('AdminLTE requires jQuery')
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this);
-      var data  = $this.data(DataKey);
+      var data = $this.data(DataKey);
 
       if (!data) {
         var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option);
@@ -959,7 +960,7 @@ throw new Error('AdminLTE requires jQuery')
 
   var old = $.fn.tree;
 
-  $.fn.tree             = Plugin;
+  $.fn.tree = Plugin;
   $.fn.tree.Constructor = Tree;
 
   // No Conflict Mode
@@ -978,7 +979,6 @@ throw new Error('AdminLTE requires jQuery')
   });
 
 }(jQuery);
-
 
 /* Layout()
  * ========
@@ -1028,12 +1028,12 @@ throw new Error('AdminLTE requires jQuery')
 
     var touchSideSwipe = new TouchSideSwipe({
       elementID: 'main-sidebar',
-      elementWidth: 230, //px
-      elementMaxWidth: 0.72, // *100%
-      sideHookWidth: 40, //px
+      elementWidth: 300, //px
+      elementMaxWidth: 0.9, // *100%
+      sideHookWidth: 15, //px
       moveSpeed: 0.3,
       opacityBackground: 0.6,
-      shiftForStart: 90,
+      shiftForStart: 15,
       windowMaxWidth: 768,
     });
 

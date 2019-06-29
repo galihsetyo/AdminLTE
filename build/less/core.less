@@ -79,6 +79,11 @@ body {
   min-height: ~"calc(100% - 102px)";
   background-color: @content-bg;
   z-index: 800;
+
+  @media (min-width: @screen-header-collapse) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .main-footer {
@@ -109,10 +114,10 @@ body {
 
   .content-wrapper,
   .right-side {
-    padding-top: 50px;
+    padding-top: @navbar-height;
 
     @media (max-width: @screen-header-collapse) {
-      padding-top: 100px;
+      padding-top: @navbar-height;
     }
   }
 

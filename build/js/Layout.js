@@ -46,12 +46,12 @@
 
     var touchSideSwipe = new TouchSideSwipe({
       elementID: 'main-sidebar',
-      elementWidth: 230, //px
-      elementMaxWidth: 0.72, // *100%
-      sideHookWidth: 40, //px
+      elementWidth: 300, //px
+      elementMaxWidth: 0.9, // *100%
+      sideHookWidth: 15, //px
       moveSpeed: 0.3,
       opacityBackground: 0.6,
-      shiftForStart: 90,
+      shiftForStart: 15,
       windowMaxWidth: 768,
     });
 
