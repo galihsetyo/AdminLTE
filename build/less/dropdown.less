@@ -2,25 +2,26 @@
  * Component: Dropdown menus
  * -------------------------
  */
-
-.dropdown {
-  .dropdown-menu {
-    -webkit-transition: all 150ms linear;
-    -moz-transition: all 150ms linear;
-    -o-transition: all 150ms linear;
-    -ms-transition: all 150ms linear;
-    transition: all 150ms linear;
-    margin-top: -20px !important;
-    opacity: 0;
-    visibility: hidden;
-    display: block;
+@media (min-width: @screen-sm) {
+  .dropdown {
+    .dropdown-menu {
+      -webkit-transition: all 150ms linear;
+      -moz-transition: all 150ms linear;
+      -o-transition: all 150ms linear;
+      -ms-transition: all 150ms linear;
+      transition: all 150ms linear;
+      margin-top: -20px !important;
+      opacity: 0;
+      visibility: hidden;
+      display: block;
+    }
   }
-}
 
-.dropdown.open .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  margin-top: 0px !important;
+  .dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0px !important;
+  }
 }
 
 /*Dropdowns in general*/

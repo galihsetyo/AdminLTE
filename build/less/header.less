@@ -15,11 +15,28 @@
     margin-bottom: 0;
     margin-left: @sidebar-width;
     border: none;
-    max-height: @navbar-height;
+    min-height: @navbar-height;
     border-radius: 0;
 
     .layout-top-nav & {
       margin-left: 0;
+    }
+  }
+
+  .navbar-brand {
+    height: @navbar-height;
+    padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  }
+
+  @media (min-width: @screen-sm) {
+    .navbar-nav>li>a {
+      padding: (@navbar-padding-vertical - 14) @navbar-padding-horizontal;
+      margin: 14px 5px;
+      border-radius: 10px;
+    }
+
+    .navbar-form {
+      margin: 19px 0;
     }
   }
 
@@ -52,6 +69,7 @@
   .navbar-custom-menu,
   .navbar-right {
     float: right;
+    padding-right: 5px;
 
     @media (max-width: @screen-sm-max) {
       a {
@@ -85,10 +103,13 @@
     float: left;
     background-color: transparent;
     background-image: none;
-    padding: (@navbar-padding-vertical - 1) @navbar-padding-horizontal;
+    padding: (@navbar-padding-vertical - 14) @navbar-padding-horizontal;
     //Add the fontawesome bars icon
     font-family: fontAwesome;
     font-size: 16px;
+    line-height: 20px;
+    margin: 14px 14px;
+    border-radius: 10px;
 
     &:before {
       content: "\f0c9";
@@ -121,7 +142,7 @@
   //Labels in navbar
   .navbar .nav>li>a>.label {
     position: absolute;
-    top: (@navbar-padding-vertical - 5);
+    top: 9px;
     right: 7px;
     text-align: center;
     font-size: 9px;
@@ -234,9 +255,10 @@
 }
 
 .navbar-custom-menu .navbar-nav>li>a {
-  padding-top: @navbar-padding-vertical  !important;
-  padding-bottom: @navbar-padding-vertical  !important;
+  padding: (@navbar-padding-vertical - 14) (@navbar-padding-vertical - 12) !important;
   font-size: 16px;
+  margin: 14px 3px;
+  border-radius: 10px;
 }
 
 //Control navbar scaffolding on x-small screens
@@ -252,8 +274,7 @@
   }
 
   .navbar-custom-menu .navbar-nav>li>a {
-    padding-top: @navbar-padding-vertical  !important;
-    padding-bottom: @navbar-padding-vertical  !important;
+    padding: (@navbar-padding-vertical - 14) (@navbar-padding-vertical - 12) !important;
   }
 }
 
@@ -281,7 +302,7 @@
     }
 
     .sidebar-toggle {
-      padding: 25px 25px;
+      padding: (@navbar-padding-vertical - 14) @navbar-padding-horizontal;
     }
   }
 }
@@ -296,5 +317,25 @@
       top: 0;
       right: 40px;
     }
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
   }
 }
