@@ -40,7 +40,7 @@ body {
   clear: both;
 }
 .layout-boxed .wrapper {
-  max-width: 1250px;
+  max-width: 1280px;
   margin: 0 auto;
   min-height: 100%;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -784,7 +784,7 @@ a:focus {
  * Component: Control sidebar. By default, this is the right sidebar.
  */
 .control-sidebar-bg {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
   bottom: 0;
 }
@@ -3438,12 +3438,14 @@ table.text-center th {
 .login-page,
 .register-page {
   height: auto;
-  background: #d2d6de;
+  background-color: #2196f3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2351adf6' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2372bcf7'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
 }
 .login-box,
 .register-box {
-  width: 360px;
+  width: 487px;
   margin: 7% auto;
+  position: relative;
 }
 @media (max-width: 768px) {
   .login-box,
@@ -3455,9 +3457,11 @@ table.text-center th {
 .login-box-body,
 .register-box-body {
   background: #fff;
-  padding: 20px;
+  padding: 20px 40px 40px;
   border-top: 0;
   color: #666;
+  border-radius: 7px;
+  height: 500px;
 }
 .login-box-body .form-control-feedback,
 .register-box-body .form-control-feedback {
@@ -3466,11 +3470,65 @@ table.text-center th {
 .login-box-msg,
 .register-box-msg {
   margin: 0;
-  text-align: center;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 20px 0;
 }
 .social-auth-links {
   margin: 10px 0;
+}
+.login-header {
+  color: #6ab8f7;
+}
+.login-box .nav.nav-tabs {
+  transform: translateY(-50%) translateX(-60%) rotate(270deg);
+  position: absolute;
+  border: none;
+  top: 50%;
+}
+.login-box .nav.nav-tabs > li > a {
+  background-color: inherit;
+  border: none;
+  font-weight: 700;
+  padding: 10px 43px;
+  color: #b2dbfb;
+}
+.login-box .nav.nav-tabs > li.active > a {
+  color: #fff;
+}
+.login-box .tabs::before {
+  content: "";
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  height: 70%;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateX(-100%) translateY(-50%);
+  border-radius: 6px 0 0 6px;
+  z-index: -1;
+}
+.login-box-body::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.1);
+  width: 95%;
+  height: 70%;
+  border-radius: 6px;
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -2;
+}
+.login-box-body::after {
+  content: "";
+  background: rgba(255, 255, 255, 0.1);
+  width: 90%;
+  height: 65%;
+  border-radius: 6px;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 /*
  * Page: 400 and 500 error pages
