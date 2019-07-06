@@ -7,6 +7,11 @@
 }
 .skin-green .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#449d48, #449d48);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-green .main-header .navbar .nav > li > a:hover,
 .skin-green .main-header .navbar .nav > li > a:active,
@@ -15,15 +20,22 @@
 .skin-green .main-header .navbar .nav .open > a:hover,
 .skin-green .main-header .navbar .nav .open > a:focus,
 .skin-green .main-header .navbar .nav > .active > a {
-  background: #449d48;
+  background-color: #4caf50;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-green .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#449d48, #449d48);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-green .main-header .navbar .sidebar-toggle:hover {
+  background-color: #4caf50;
   color: #f6f6f6;
-  background: #449d48;
+  background-size: 100% 100%;
 }
 .skin-green .main-header .navbar .sidebar-toggle {
   color: #fff;

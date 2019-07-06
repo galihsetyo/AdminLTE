@@ -7,6 +7,11 @@
 }
 .skin-red-light .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#bc0000, #bc0000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-red-light .main-header .navbar .nav > li > a:hover,
 .skin-red-light .main-header .navbar .nav > li > a:active,
@@ -15,15 +20,22 @@
 .skin-red-light .main-header .navbar .nav .open > a:hover,
 .skin-red-light .main-header .navbar .nav .open > a:focus,
 .skin-red-light .main-header .navbar .nav > .active > a {
-  background: #bc0000;
+  background-color: #d50000;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-red-light .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#bc0000, #bc0000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-red-light .main-header .navbar .sidebar-toggle:hover {
+  background-color: #d50000;
   color: #f6f6f6;
-  background: #bc0000;
+  background-size: 100% 100%;
 }
 .skin-red-light .main-header .navbar .sidebar-toggle {
   color: #fff;

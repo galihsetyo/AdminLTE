@@ -8,6 +8,11 @@
   //Navbar links
   .nav>li>a {
     color: @font-color;
+    background-image: linear-gradient(@hover-bg, @hover-bg);
+    background-repeat: no-repeat;
+    transition: background-size .5s, color .5s;
+    background-size: 0% 0%;
+    background-position: center;
   }
 
   .nav>li>a:hover,
@@ -17,17 +22,24 @@
   .nav .open>a:hover,
   .nav .open>a:focus,
   .nav>.active>a {
-    background: @hover-bg;
+    background-color: @color;
     color: @hover-color;
+    background-size: 100% 100%;
   }
 
   //Add color to the sidebar toggle button
   .sidebar-toggle {
     color: @font-color;
+    background-image: linear-gradient(@hover-bg, @hover-bg);
+    background-repeat: no-repeat;
+    transition: background-size .5s, color .5s;
+    background-size: 0% 0%;
+    background-position: center;
 
     &:hover {
+      background-color: @color;
       color: @hover-color;
-      background: @hover-bg;
+      background-size: 100% 100%;
     }
   }
 }

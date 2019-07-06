@@ -7,6 +7,11 @@
 }
 .skin-blue .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#0d8aee, #0d8aee);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-blue .main-header .navbar .nav > li > a:hover,
 .skin-blue .main-header .navbar .nav > li > a:active,
@@ -15,21 +20,22 @@
 .skin-blue .main-header .navbar .nav .open > a:hover,
 .skin-blue .main-header .navbar .nav .open > a:focus,
 .skin-blue .main-header .navbar .nav > .active > a {
-  background: #0d8aee;
+  background-color: #2196f3;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#0d8aee, #0d8aee);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
+  background-color: #2196f3;
   color: #f6f6f6;
-  background: #0d8aee;
-}
-.skin-blue .main-header .navbar .sidebar-toggle {
-  color: #fff;
-}
-.skin-blue .main-header .navbar .sidebar-toggle:hover {
-  background-color: #0d8aee;
+  background-size: 100% 100%;
 }
 @media (max-width: 767px) {
   .skin-blue .main-header .navbar .dropdown-menu li.divider {
@@ -152,6 +158,11 @@
 }
 .skin-blue-light .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#0d8aee, #0d8aee);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-blue-light .main-header .navbar .nav > li > a:hover,
 .skin-blue-light .main-header .navbar .nav > li > a:active,
@@ -160,15 +171,22 @@
 .skin-blue-light .main-header .navbar .nav .open > a:hover,
 .skin-blue-light .main-header .navbar .nav .open > a:focus,
 .skin-blue-light .main-header .navbar .nav > .active > a {
-  background: #0d8aee;
+  background-color: #2196f3;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-blue-light .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#0d8aee, #0d8aee);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-blue-light .main-header .navbar .sidebar-toggle:hover {
+  background-color: #2196f3;
   color: #f6f6f6;
-  background: #0d8aee;
+  background-size: 100% 100%;
 }
 .skin-blue-light .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -318,6 +336,11 @@
 }
 .skin-dark-blue .main-header .navbar .nav > li > a {
   color: #ececed;
+  background-image: linear-gradient(#18212b, #18212b);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-dark-blue .main-header .navbar .nav > li > a:hover,
 .skin-dark-blue .main-header .navbar .nav > li > a:active,
@@ -326,15 +349,22 @@
 .skin-dark-blue .main-header .navbar .nav .open > a:hover,
 .skin-dark-blue .main-header .navbar .nav .open > a:focus,
 .skin-dark-blue .main-header .navbar .nav > .active > a {
-  background: #18212b;
+  background-color: #212d3b;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-dark-blue .main-header .navbar .sidebar-toggle {
   color: #ececed;
+  background-image: linear-gradient(#18212b, #18212b);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-dark-blue .main-header .navbar .sidebar-toggle:hover {
+  background-color: #212d3b;
   color: #f6f6f6;
-  background: #18212b;
+  background-size: 100% 100%;
 }
 .skin-dark-blue .main-header .navbar .sidebar-toggle {
   color: #ececed;
@@ -567,6 +597,11 @@
 }
 .skin-black-light .main-header .navbar .nav > li > a {
   color: #333333;
+  background-image: linear-gradient(#ffffff, #ffffff);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-black-light .main-header .navbar .nav > li > a:hover,
 .skin-black-light .main-header .navbar .nav > li > a:active,
@@ -575,15 +610,22 @@
 .skin-black-light .main-header .navbar .nav .open > a:hover,
 .skin-black-light .main-header .navbar .nav .open > a:focus,
 .skin-black-light .main-header .navbar .nav > .active > a {
-  background: #ffffff;
+  background-color: #ffffff;
   color: #999999;
+  background-size: 100% 100%;
 }
 .skin-black-light .main-header .navbar .sidebar-toggle {
   color: #333333;
+  background-image: linear-gradient(#ffffff, #ffffff);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-black-light .main-header .navbar .sidebar-toggle:hover {
+  background-color: #ffffff;
   color: #999999;
-  background: #ffffff;
+  background-size: 100% 100%;
 }
 .skin-black-light .main-header .navbar > .sidebar-toggle {
   color: #333;
@@ -730,6 +772,11 @@
 }
 .skin-green .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#449d48, #449d48);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-green .main-header .navbar .nav > li > a:hover,
 .skin-green .main-header .navbar .nav > li > a:active,
@@ -738,15 +785,22 @@
 .skin-green .main-header .navbar .nav .open > a:hover,
 .skin-green .main-header .navbar .nav .open > a:focus,
 .skin-green .main-header .navbar .nav > .active > a {
-  background: #449d48;
+  background-color: #4caf50;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-green .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#449d48, #449d48);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-green .main-header .navbar .sidebar-toggle:hover {
+  background-color: #4caf50;
   color: #f6f6f6;
-  background: #449d48;
+  background-size: 100% 100%;
 }
 .skin-green .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -867,6 +921,11 @@
 }
 .skin-green-light .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#449d48, #449d48);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-green-light .main-header .navbar .nav > li > a:hover,
 .skin-green-light .main-header .navbar .nav > li > a:active,
@@ -875,15 +934,22 @@
 .skin-green-light .main-header .navbar .nav .open > a:hover,
 .skin-green-light .main-header .navbar .nav .open > a:focus,
 .skin-green-light .main-header .navbar .nav > .active > a {
-  background: #449d48;
+  background-color: #4caf50;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-green-light .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#449d48, #449d48);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-green-light .main-header .navbar .sidebar-toggle:hover {
+  background-color: #4caf50;
   color: #f6f6f6;
-  background: #449d48;
+  background-size: 100% 100%;
 }
 .skin-green-light .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -1022,6 +1088,11 @@
 }
 .skin-red .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#bc0000, #bc0000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-red .main-header .navbar .nav > li > a:hover,
 .skin-red .main-header .navbar .nav > li > a:active,
@@ -1030,15 +1101,22 @@
 .skin-red .main-header .navbar .nav .open > a:hover,
 .skin-red .main-header .navbar .nav .open > a:focus,
 .skin-red .main-header .navbar .nav > .active > a {
-  background: #bc0000;
+  background-color: #d50000;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-red .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#bc0000, #bc0000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-red .main-header .navbar .sidebar-toggle:hover {
+  background-color: #d50000;
   color: #f6f6f6;
-  background: #bc0000;
+  background-size: 100% 100%;
 }
 .skin-red .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -1159,6 +1237,11 @@
 }
 .skin-red-light .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#bc0000, #bc0000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-red-light .main-header .navbar .nav > li > a:hover,
 .skin-red-light .main-header .navbar .nav > li > a:active,
@@ -1167,15 +1250,22 @@
 .skin-red-light .main-header .navbar .nav .open > a:hover,
 .skin-red-light .main-header .navbar .nav .open > a:focus,
 .skin-red-light .main-header .navbar .nav > .active > a {
-  background: #bc0000;
+  background-color: #d50000;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-red-light .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#bc0000, #bc0000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-red-light .main-header .navbar .sidebar-toggle:hover {
+  background-color: #d50000;
   color: #f6f6f6;
-  background: #bc0000;
+  background-size: 100% 100%;
 }
 .skin-red-light .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -1314,6 +1404,11 @@
 }
 .skin-yellow .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#e69000, #e69000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-yellow .main-header .navbar .nav > li > a:hover,
 .skin-yellow .main-header .navbar .nav > li > a:active,
@@ -1322,15 +1417,22 @@
 .skin-yellow .main-header .navbar .nav .open > a:hover,
 .skin-yellow .main-header .navbar .nav .open > a:focus,
 .skin-yellow .main-header .navbar .nav > .active > a {
-  background: #e69000;
+  background-color: #ffa000;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-yellow .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#e69000, #e69000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-yellow .main-header .navbar .sidebar-toggle:hover {
+  background-color: #ffa000;
   color: #f6f6f6;
-  background: #e69000;
+  background-size: 100% 100%;
 }
 .skin-yellow .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -1451,6 +1553,11 @@
 }
 .skin-yellow-light .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#e69000, #e69000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-yellow-light .main-header .navbar .nav > li > a:hover,
 .skin-yellow-light .main-header .navbar .nav > li > a:active,
@@ -1459,15 +1566,22 @@
 .skin-yellow-light .main-header .navbar .nav .open > a:hover,
 .skin-yellow-light .main-header .navbar .nav .open > a:focus,
 .skin-yellow-light .main-header .navbar .nav > .active > a {
-  background: #e69000;
+  background-color: #ffa000;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-yellow-light .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#e69000, #e69000);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-yellow-light .main-header .navbar .sidebar-toggle:hover {
+  background-color: #ffa000;
   color: #f6f6f6;
-  background: #e69000;
+  background-size: 100% 100%;
 }
 .skin-yellow-light .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -1606,6 +1720,11 @@
 }
 .skin-purple .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#5c34a4, #5c34a4);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-purple .main-header .navbar .nav > li > a:hover,
 .skin-purple .main-header .navbar .nav > li > a:active,
@@ -1614,15 +1733,22 @@
 .skin-purple .main-header .navbar .nav .open > a:hover,
 .skin-purple .main-header .navbar .nav .open > a:focus,
 .skin-purple .main-header .navbar .nav > .active > a {
-  background: #5c34a4;
+  background-color: #673ab7;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-purple .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#5c34a4, #5c34a4);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-purple .main-header .navbar .sidebar-toggle:hover {
+  background-color: #673ab7;
   color: #f6f6f6;
-  background: #5c34a4;
+  background-size: 100% 100%;
 }
 .skin-purple .main-header .navbar .sidebar-toggle {
   color: #fff;
@@ -1743,6 +1869,11 @@
 }
 .skin-purple-light .main-header .navbar .nav > li > a {
   color: #ffffff;
+  background-image: linear-gradient(#5c34a4, #5c34a4);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-purple-light .main-header .navbar .nav > li > a:hover,
 .skin-purple-light .main-header .navbar .nav > li > a:active,
@@ -1751,15 +1882,22 @@
 .skin-purple-light .main-header .navbar .nav .open > a:hover,
 .skin-purple-light .main-header .navbar .nav .open > a:focus,
 .skin-purple-light .main-header .navbar .nav > .active > a {
-  background: #5c34a4;
+  background-color: #673ab7;
   color: #f6f6f6;
+  background-size: 100% 100%;
 }
 .skin-purple-light .main-header .navbar .sidebar-toggle {
   color: #ffffff;
+  background-image: linear-gradient(#5c34a4, #5c34a4);
+  background-repeat: no-repeat;
+  transition: background-size 0.5s, color 0.5s;
+  background-size: 0% 0%;
+  background-position: center;
 }
 .skin-purple-light .main-header .navbar .sidebar-toggle:hover {
+  background-color: #673ab7;
   color: #f6f6f6;
-  background: #5c34a4;
+  background-size: 100% 100%;
 }
 .skin-purple-light .main-header .navbar .sidebar-toggle {
   color: #fff;
