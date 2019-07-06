@@ -8,11 +8,7 @@
   //Navbar links
   .nav>li>a {
     color: @font-color;
-    background-image: linear-gradient(@hover-bg, @hover-bg);
-    background-repeat: no-repeat;
-    transition: background-size .5s, color .5s;
-    background-size: 0% 0%;
-    background-position: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 
   .nav>li>a:hover,
@@ -22,24 +18,17 @@
   .nav .open>a:hover,
   .nav .open>a:focus,
   .nav>.active>a {
-    background-color: @color;
+    background-color: @hover-bg;
     color: @hover-color;
-    background-size: 100% 100%;
   }
 
   //Add color to the sidebar toggle button
   .sidebar-toggle {
     color: @font-color;
-    background-image: linear-gradient(@hover-bg, @hover-bg);
-    background-repeat: no-repeat;
-    transition: background-size .5s, color .5s;
-    background-size: 0% 0%;
-    background-position: center;
 
     &:hover {
-      background-color: @color;
+      background-color: @hover-bg;
       color: @hover-color;
-      background-size: 100% 100%;
     }
   }
 }
@@ -151,6 +140,9 @@
     //links
     >a {
       border-left: 3px solid transparent;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
     }
 
     //Hover and active states
@@ -280,6 +272,9 @@
     >a {
       border-left: 3px solid transparent;
       font-weight: 600;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
     }
 
     //Hover and active states
@@ -422,6 +417,9 @@
       }
 
       border-left: 3px solid transparent;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
     }
 
     //Hover and active states

@@ -7,11 +7,7 @@
 }
 .skin-red .main-header .navbar .nav > li > a {
   color: #ffffff;
-  background-image: linear-gradient(#bc0000, #bc0000);
-  background-repeat: no-repeat;
-  transition: background-size 0.5s, color 0.5s;
-  background-size: 0% 0%;
-  background-position: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .skin-red .main-header .navbar .nav > li > a:hover,
 .skin-red .main-header .navbar .nav > li > a:active,
@@ -20,28 +16,15 @@
 .skin-red .main-header .navbar .nav .open > a:hover,
 .skin-red .main-header .navbar .nav .open > a:focus,
 .skin-red .main-header .navbar .nav > .active > a {
-  background-color: #d50000;
+  background-color: #bc0000;
   color: #f6f6f6;
-  background-size: 100% 100%;
 }
 .skin-red .main-header .navbar .sidebar-toggle {
   color: #ffffff;
-  background-image: linear-gradient(#bc0000, #bc0000);
-  background-repeat: no-repeat;
-  transition: background-size 0.5s, color 0.5s;
-  background-size: 0% 0%;
-  background-position: center;
-}
-.skin-red .main-header .navbar .sidebar-toggle:hover {
-  background-color: #d50000;
-  color: #f6f6f6;
-  background-size: 100% 100%;
-}
-.skin-red .main-header .navbar .sidebar-toggle {
-  color: #fff;
 }
 .skin-red .main-header .navbar .sidebar-toggle:hover {
   background-color: #bc0000;
+  color: #f6f6f6;
 }
 @media (max-width: 767px) {
   .skin-red .main-header .navbar .dropdown-menu li.divider {
@@ -83,6 +66,7 @@
 }
 .skin-red .sidebar-menu > li > a {
   border-left: 3px solid transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .skin-red .sidebar-menu > li:hover > a,
 .skin-red .sidebar-menu > li.active > a,

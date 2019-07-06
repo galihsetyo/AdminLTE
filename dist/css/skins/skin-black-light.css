@@ -19,11 +19,7 @@
 }
 .skin-black-light .main-header .navbar .nav > li > a {
   color: #333333;
-  background-image: linear-gradient(#ffffff, #ffffff);
-  background-repeat: no-repeat;
-  transition: background-size 0.5s, color 0.5s;
-  background-size: 0% 0%;
-  background-position: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .skin-black-light .main-header .navbar .nav > li > a:hover,
 .skin-black-light .main-header .navbar .nav > li > a:active,
@@ -34,24 +30,13 @@
 .skin-black-light .main-header .navbar .nav > .active > a {
   background-color: #ffffff;
   color: #999999;
-  background-size: 100% 100%;
 }
 .skin-black-light .main-header .navbar .sidebar-toggle {
   color: #333333;
-  background-image: linear-gradient(#ffffff, #ffffff);
-  background-repeat: no-repeat;
-  transition: background-size 0.5s, color 0.5s;
-  background-size: 0% 0%;
-  background-position: center;
 }
 .skin-black-light .main-header .navbar .sidebar-toggle:hover {
   background-color: #ffffff;
   color: #999999;
-  background-size: 100% 100%;
-}
-.skin-black-light .main-header .navbar > .sidebar-toggle {
-  color: #333;
-  border-right: 1px solid #d2d6de;
 }
 .skin-black-light .main-header .navbar .navbar-nav > li > a {
   border-right: 1px solid #d2d6de;
@@ -112,6 +97,7 @@
 .skin-black-light .sidebar-menu > li > a {
   border-left: 3px solid transparent;
   font-weight: 600;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .skin-black-light .sidebar-menu > li:hover > a,
 .skin-black-light .sidebar-menu > li.active > a {
