@@ -21,6 +21,10 @@
     padding-top: 0;
   }
 
+  @media (min-width: @screen-header-collapse) {
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1);
+  }
+
   .sidebar-collapse & {
     @media (min-width: @screen-sm) {
       .translate(-@sidebar-width, 0);

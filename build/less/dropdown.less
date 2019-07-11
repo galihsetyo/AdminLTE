@@ -20,7 +20,13 @@
   .dropdown.open .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    margin-top: 0px !important;
+    margin-top: -9px !important;
+  }
+}
+
+@media (max-width: @screen-sm) {
+  .navbar-nav .open .dropdown-menu {
+    margin-top: -9px !important;
   }
 }
 
@@ -83,7 +89,6 @@
     font-size: 12px;
     background-color: #fff;
     padding: 7px 10px;
-    border-bottom: 1px solid #eeeeee;
     color: #444 !important;
 
     @media (max-width: @screen-sm-max) {
@@ -224,7 +229,7 @@
 .navbar-nav>.user-menu {
   >.dropdown-menu {
     .border-top-radius(0);
-    padding: 1px 0 0 0;
+    padding: 0;
     // border-top-width: 0;
     width: 280px;
 

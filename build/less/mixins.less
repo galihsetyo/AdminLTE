@@ -379,7 +379,7 @@
 //Dark Blue Sidebar Mixin
 .skin-dark-blue-sidebar(@main-color, @menu-hilight) {
 
-  @submenu-color : lighten(@main-color, 3.3%);
+  @submenu-color : darken(@main-color, 2%);
 
   // Sidebar background color (Both .wrapper and .left-side are responsible for sidebar bg color)
   .wrapper,
@@ -436,7 +436,7 @@
 
     //First Level Submenu
     >.treeview-menu {
-      margin: 0 1px;
+      margin: 0;
       background: @submenu-color;
       border-top: 1px solid darken(@submenu-color, 2%);
 

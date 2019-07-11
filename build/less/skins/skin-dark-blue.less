@@ -8,7 +8,6 @@
 @import "../mixins.less";
 
 @footer: darken(@dark-blue, 2%);
-@submenu-color : lighten(@dark-blue, 3.3%);
 
 .skin-dark-blue {
 
@@ -52,7 +51,7 @@
     }
 
     li.user-header {
-      background-color: @dark-blue;
+      background-color: lighten(@dark-blue, 7%);
     }
   }
 
@@ -153,15 +152,15 @@
   }
 
   .dropdown-menu {
-    background-color: @submenu-color;
+    background-color: lighten(@dark-blue, 7%) !important;
     color: @dark-text-color  !important;
     border-color: darken(@dark-blue, 3%);
   }
 
   .navbar-nav>.user-menu>.dropdown-menu {
     &>.user-body {
-      border-bottom: 1px solid darken(@submenu-color, 2%);
-      border-top: 1px solid darken(@submenu-color, 2%);
+      border-bottom: 1px solid lighten(@dark-blue, 3%);
+      border-top: 1px solid lighten(@dark-blue, 3%);
 
       a {
         color: @dark-text-color  !important;
@@ -169,14 +168,14 @@
     }
 
     &>.user-footer {
-      background-color: @dark-blue;
+      background-color: lighten(@dark-blue, 7%);
     }
   }
 
   .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a,
   .navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a,
   .navbar-nav>.tasks-menu>.dropdown-menu>li .menu>li>a {
-    border-bottom: 1px solid darken(@submenu-color, 2%);
+    border-bottom: 1px solid lighten(@dark-blue, 3%);
     color: @dark-text-color;
 
     &:hover {
@@ -189,8 +188,8 @@
   .navbar-nav>.tasks-menu {
     >.dropdown-menu>li {
       &.header {
-        background-color: @dark-blue;
-        border-bottom: 1px solid darken(@submenu-color, 2%);
+        background-color: lighten(@dark-blue, 7%);
+        border-bottom: 1px solid lighten(@dark-blue, 3%);
         color: @dark-text-color;
       }
 
@@ -200,13 +199,12 @@
       }
 
       &.footer>a {
-        .border-radius(0; 0; 10px; 10px);
-        background-color: @dark-blue;
-        border-bottom: 1px solid darken(@submenu-color, 2%);
+        background-color: lighten(@dark-blue, 7%);
+        border-top: 1px solid lighten(@dark-blue, 3%);
         color: @dark-text-color  !important;
 
         @media (max-width: @screen-sm-max) {
-          background: @dark-blue  !important;
+          background: lighten(@dark-blue, 7%) !important;
           color: @dark-text-color  !important;
         }
       }

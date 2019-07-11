@@ -488,6 +488,11 @@ a:focus {
     padding-top: 0;
   }
 }
+@media (min-width: 767px) {
+  .main-sidebar {
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1);
+  }
+}
 @media (min-width: 768px) {
   .sidebar-collapse .main-sidebar {
     -webkit-transform: translate(-300px, 0);
@@ -1072,7 +1077,12 @@ a:focus {
   .dropdown.open .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    margin-top: 0px !important;
+    margin-top: -9px !important;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-nav .open .dropdown-menu {
+    margin-top: -9px !important;
   }
 }
 /*Dropdowns in general*/
@@ -1131,7 +1141,6 @@ a:focus {
   font-size: 12px;
   background-color: #fff;
   padding: 7px 10px;
-  border-bottom: 1px solid #eeeeee;
   color: #444 !important;
   text-align: center;
 }
@@ -1240,7 +1249,7 @@ a:focus {
 .navbar-nav > .user-menu > .dropdown-menu {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  padding: 1px 0 0 0;
+  padding: 0;
   width: 280px;
 }
 .navbar-nav > .user-menu > .dropdown-menu,

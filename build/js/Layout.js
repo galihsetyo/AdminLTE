@@ -41,9 +41,11 @@
     this.activate();
   };
 
+
+
   Layout.prototype.activate = function () {
     this.fix();
-
+    this.hideHeader();
     var touchSideSwipe = new TouchSideSwipe({
       elementID: 'main-sidebar',
       elementWidth: 300, //px
@@ -144,6 +146,32 @@
       }
     }
   };
+
+  Layout.prototype.hideHeader = function () {
+    if ($(window).width() <= 767) {
+      var lastScrollTop = 0;
+      $(window).scroll(function (event) {
+        var currentTop = parseInt($('.main-header').css("top").replace('px', ''));
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+          // downscroll code
+          currentTop -= (st - lastScrollTop);
+          currentTop = (currentTop > -72 ? currentTop : -72);
+          $('.main-header').css({
+            top: currentTop
+          });
+        } else {
+          // upscroll code
+          currentTop += (lastScrollTop - st);
+          currentTop = (currentTop < 0 ? currentTop : 0);
+          $('.main-header').css({
+            top: currentTop
+          });
+        }
+        lastScrollTop = st;
+      });
+    }
+  }
 
   // Plugin Definition
   // =================

@@ -346,7 +346,7 @@
   border-bottom: 0 solid transparent;
 }
 .skin-dark-blue .main-header li.user-header {
-  background-color: #212d3b;
+  background-color: #2e3e52;
 }
 .skin-dark-blue .content-header {
   background: transparent;
@@ -386,9 +386,9 @@
   border-left-color: #2c3541;
 }
 .skin-dark-blue .sidebar-menu > li > .treeview-menu {
-  margin: 0 1px;
-  background: #273546;
-  border-top: 1px solid #23303f;
+  margin: 0;
+  background: #1d2834;
+  border-top: 1px solid #1a232e;
 }
 .skin-dark-blue .sidebar-menu > li > .treeview-menu > li > a > .fa,
 .skin-dark-blue .sidebar-menu > li > .treeview-menu > li > a > .glyphicon,
@@ -505,24 +505,24 @@
   border-left-color: #18212b;
 }
 .skin-dark-blue .dropdown-menu {
-  background-color: #273546;
+  background-color: #2e3e52 !important;
   color: #ececed !important;
   border-color: #1c2631;
 }
 .skin-dark-blue .navbar-nav > .user-menu > .dropdown-menu > .user-body {
-  border-bottom: 1px solid #23303f;
-  border-top: 1px solid #23303f;
+  border-bottom: 1px solid #263445;
+  border-top: 1px solid #263445;
 }
 .skin-dark-blue .navbar-nav > .user-menu > .dropdown-menu > .user-body a {
   color: #ececed !important;
 }
 .skin-dark-blue .navbar-nav > .user-menu > .dropdown-menu > .user-footer {
-  background-color: #212d3b;
+  background-color: #2e3e52;
 }
 .skin-dark-blue .navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a,
 .skin-dark-blue .navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a,
 .skin-dark-blue .navbar-nav > .tasks-menu > .dropdown-menu > li .menu > li > a {
-  border-bottom: 1px solid #23303f;
+  border-bottom: 1px solid #263445;
   color: #ececed;
 }
 .skin-dark-blue .navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a:hover,
@@ -533,8 +533,8 @@
 .skin-dark-blue .navbar-nav > .notifications-menu > .dropdown-menu > li.header,
 .skin-dark-blue .navbar-nav > .messages-menu > .dropdown-menu > li.header,
 .skin-dark-blue .navbar-nav > .tasks-menu > .dropdown-menu > li.header {
-  background-color: #212d3b;
-  border-bottom: 1px solid #23303f;
+  background-color: #2e3e52;
+  border-bottom: 1px solid #263445;
   color: #ececed;
 }
 .skin-dark-blue .navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > h4,
@@ -548,19 +548,15 @@
 .skin-dark-blue .navbar-nav > .notifications-menu > .dropdown-menu > li.footer > a,
 .skin-dark-blue .navbar-nav > .messages-menu > .dropdown-menu > li.footer > a,
 .skin-dark-blue .navbar-nav > .tasks-menu > .dropdown-menu > li.footer > a {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-color: #212d3b;
-  border-bottom: 1px solid #23303f;
+  background-color: #2e3e52;
+  border-top: 1px solid #263445;
   color: #ececed !important;
 }
 @media (max-width: 991px) {
   .skin-dark-blue .navbar-nav > .notifications-menu > .dropdown-menu > li.footer > a,
   .skin-dark-blue .navbar-nav > .messages-menu > .dropdown-menu > li.footer > a,
   .skin-dark-blue .navbar-nav > .tasks-menu > .dropdown-menu > li.footer > a {
-    background: #212d3b !important;
+    background: #2e3e52 !important;
     color: #ececed !important;
   }
 }
