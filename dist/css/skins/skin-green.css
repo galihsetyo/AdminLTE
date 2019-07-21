@@ -16,14 +16,14 @@
 .skin-green .main-header .navbar .nav .open > a:hover,
 .skin-green .main-header .navbar .nav .open > a:focus,
 .skin-green .main-header .navbar .nav > .active > a {
-  background-color: #449d48;
+  background-color: #49a84d;
   color: #f6f6f6;
 }
 .skin-green .main-header .navbar .sidebar-toggle {
   color: #ffffff;
 }
 .skin-green .main-header .navbar .sidebar-toggle:hover {
-  background-color: #449d48;
+  background-color: #49a84d;
   color: #f6f6f6;
 }
 @media (max-width: 767px) {

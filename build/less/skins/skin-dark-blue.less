@@ -35,7 +35,7 @@
               color: @dark-text-color;
 
               &:hover {
-                background: darken(@dark-blue, 5%);
+                background: @dark-blue-menu-hilight;
               }
             }
           }
@@ -155,6 +155,18 @@
     background-color: lighten(@dark-blue, 7%) !important;
     color: @dark-text-color  !important;
     border-color: darken(@dark-blue, 3%);
+
+    >li>a {
+      color: @dark-text-color;
+
+      &:hover {
+        background-color: @dark-blue-menu-hilight;
+      }
+    }
+
+    &>.divider {
+      background-color: darken(@dark-blue, 3%);
+    }
   }
 
   .navbar-nav>.user-menu>.dropdown-menu {

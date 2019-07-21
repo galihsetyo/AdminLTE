@@ -16,14 +16,14 @@
 .skin-blue .main-header .navbar .nav .open > a:hover,
 .skin-blue .main-header .navbar .nav .open > a:focus,
 .skin-blue .main-header .navbar .nav > .active > a {
-  background-color: #0d8aee;
+  background-color: #1791f2;
   color: #f6f6f6;
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
   color: #ffffff;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-  background-color: #0d8aee;
+  background-color: #1791f2;
   color: #f6f6f6;
 }
 @media (max-width: 767px) {

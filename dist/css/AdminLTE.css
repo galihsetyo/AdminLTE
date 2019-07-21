@@ -476,6 +476,7 @@ a:focus {
   top: 0;
   left: 0;
   padding-top: 72px;
+  padding-bottom: 20px;
   height: 100vh !important;
   width: 300px;
   z-index: 810;
@@ -1090,6 +1091,7 @@ a:focus {
 .dropdown-menu {
   box-shadow: none;
   border-color: #eee;
+  background-color: #fff !important;
 }
 .dropdown-menu > li > a {
   color: #777;
@@ -1262,8 +1264,8 @@ a:focus {
   height: 175px;
   padding: 10px;
   text-align: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -1401,6 +1403,8 @@ a:focus {
   right: 0;
   left: auto;
   border-radius: 10px;
+  border: none !important;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 991px) {
   .navbar-custom-menu > .navbar-nav {
@@ -2882,6 +2886,9 @@ table.text-center th {
  * Component: Label
  * ----------------
  */
+.label {
+  font-size: 70%;
+}
 .label-default {
   background-color: #d2d6de;
   color: #444;

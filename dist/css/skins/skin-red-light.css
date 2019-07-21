@@ -16,14 +16,14 @@
 .skin-red-light .main-header .navbar .nav .open > a:hover,
 .skin-red-light .main-header .navbar .nav .open > a:focus,
 .skin-red-light .main-header .navbar .nav > .active > a {
-  background-color: #bc0000;
+  background-color: #cb0000;
   color: #f6f6f6;
 }
 .skin-red-light .main-header .navbar .sidebar-toggle {
   color: #ffffff;
 }
 .skin-red-light .main-header .navbar .sidebar-toggle:hover {
-  background-color: #bc0000;
+  background-color: #cb0000;
   color: #f6f6f6;
 }
 @media (max-width: 767px) {
