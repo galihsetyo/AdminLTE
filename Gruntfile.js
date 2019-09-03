@@ -71,6 +71,7 @@ module.exports = function (grunt) { // jshint ignore:line
       // Non minified skin files
       skins: {
         files: {
+          'dist/css/skins/skin-dark-blue.css': 'build/less/skins/skin-dark-blue.less',
           'dist/css/skins/skin-blue.css': 'build/less/skins/skin-blue.less',
           'dist/css/skins/skin-black.css': 'build/less/skins/skin-black.less',
           'dist/css/skins/skin-yellow.css': 'build/less/skins/skin-yellow.less',
@@ -92,6 +93,7 @@ module.exports = function (grunt) { // jshint ignore:line
           compress: true
         },
         files: {
+          'dist/css/skins/skin-dark-blue.min.css': 'build/less/skins/skin-dark-blue.less',
           'dist/css/skins/skin-blue.min.css': 'build/less/skins/skin-blue.less',
           'dist/css/skins/skin-black.min.css': 'build/less/skins/skin-black.less',
           'dist/css/skins/skin-yellow.min.css': 'build/less/skins/skin-yellow.less',
