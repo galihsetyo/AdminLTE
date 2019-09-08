@@ -44,33 +44,6 @@
   Layout.prototype.activate = function() {
     this.fix();
     this.hideHeader();
-    var touchSideSwipe = new TouchSideSwipe({
-      elementID: "main-sidebar",
-      elementWidth: 300, //px
-      elementMaxWidth: 0.9, // *100%
-      sideHookWidth: 15, //px
-      moveSpeed: 0.3,
-      opacityBackground: 0.6,
-      shiftForStart: 15,
-      windowMaxWidth: 768
-    });
-
-    if ($(window).width() < 767) {
-      new SimpleBar($(".main-sidebar")[0]);
-    }
-
-    if ($("body").hasClass(ClassName.fixed)) {
-      new SimpleBar($(".main-sidebar")[0]);
-      new SimpleBar($(".control-sidebar")[0]);
-    }
-
-    $(".scroll").each(function(i, obj) {
-      new SimpleBar($(obj)[0]);
-    });
-
-    $(".chat-box").each(function(i, obj) {
-      new SimpleBar($(obj)[0]);
-    });
 
     $("body").removeClass(ClassName.holdTransition);
 

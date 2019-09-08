@@ -1,5 +1,5 @@
 {
-  "name": "admin-lte",
+  "name": "adminlte-custom",
   "version": "2.4.12",
   "main": "dist/js/adminlte.min.js",
   "repository": {
@@ -59,5 +59,14 @@
     "select2": "^4.0.3",
     "slimscroll": "^0.9.1",
     "simplebar": "^2.6.1"
-  }
+  },
+  "description": "Introduction\r ============",
+  "bugs": {
+    "url": "https://github.com/ColorlibHQ/AdminLTE/issues"
+  },
+  "homepage": "https://github.com/ColorlibHQ/AdminLTE#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
 }
