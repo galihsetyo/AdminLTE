@@ -1,6 +1,6 @@
 {
   "name": "adminlte-custom",
-  "version": "2.4.12",
+  "version": "2.14.13",
   "main": "dist/js/adminlte.min.js",
   "repository": {
     "type": "git",

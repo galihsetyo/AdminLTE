@@ -7,7 +7,7 @@
  *        Configure any options by passing data-option="value"
  *        to the body tag.
  */
-+(function($) {
++(function ($) {
   "use strict";
 
   var DataKey = "lte.layout";
@@ -35,13 +35,13 @@
     holdTransition: "hold-transition"
   };
 
-  var Layout = function(options) {
+  var Layout = function (options) {
     this.options = options;
     this.bindedResize = false;
     this.activate();
   };
 
-  Layout.prototype.activate = function() {
+  Layout.prototype.activate = function () {
     this.fix();
     this.hideHeader();
 
@@ -56,12 +56,12 @@
 
     if (!this.bindedResize) {
       $(window).resize(
-        function() {
+        function () {
           this.fix();
 
           $(Selector.logo + ", " + Selector.sidebar).one(
             "webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
-            function() {
+            function () {
               this.fix();
             }.bind(this)
           );
@@ -73,20 +73,20 @@
 
     $(Selector.sidebarMenu).on(
       "expanded.tree",
-      function() {
+      function () {
         this.fix();
       }.bind(this)
     );
 
     $(Selector.sidebarMenu).on(
       "collapsed.tree",
-      function() {
+      function () {
         this.fix();
       }.bind(this)
     );
   };
 
-  Layout.prototype.fix = function() {
+  Layout.prototype.fix = function () {
     var bd = document.getElementsByClassName("control-sidebar-backdrop");
     if (
       $(window).width() < 767 &&
@@ -138,10 +138,10 @@
     }
   };
 
-  Layout.prototype.hideHeader = function() {
+  Layout.prototype.hideHeader = function () {
     if ($(window).width() <= 767) {
       var lastScrollTop = 0;
-      $(window).scroll(function(event) {
+      $(window).scroll(function (event) {
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
           // downscroll code
@@ -162,13 +162,12 @@
   // Plugin Definition
   // =================
   function Plugin(option) {
-    return this.each(function() {
+    return this.each(function () {
       var $this = $(this);
       var data = $this.data(DataKey);
 
       if (!data) {
-        var options = $.extend(
-          {},
+        var options = $.extend({},
           Default,
           $this.data(),
           typeof option === "object" && option
@@ -192,14 +191,48 @@
 
   // No conflict mode
   // ================
-  $.fn.layout.noConflict = function() {
+  $.fn.layout.noConflict = function () {
     $.fn.layout = old;
     return this;
   };
 
   // Layout DATA-API
   // ===============
-  $(window).on("load", function() {
+  $(window).on("load", function () {
     Plugin.call($("body"));
   });
+
+  // Ripple-effect animation
+  $(".ripple-effect").click(function (e) {
+    var rippler = $(this);
+
+    // create .ink element if it doesn't exist
+    if (rippler.find(".ink").length == 0) {
+      rippler.append("<span class='ink'></span>");
+    }
+
+    var ink = rippler.find(".ink");
+
+    // prevent quick double clicks
+    ink.removeClass("animate");
+
+    // set .ink diametr
+    if (!ink.height() && !ink.width()) {
+      var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+      ink.css({
+        height: d,
+        width: d
+      });
+    }
+
+    // get click coordinates
+    var x = e.pageX - rippler.offset().left - ink.width() / 2;
+    var y = e.pageY - rippler.offset().top - ink.height() / 2;
+
+    // set .ink position and add class .animate
+    ink.css({
+      top: y + 'px',
+      left: x + 'px'
+    }).addClass("animate");
+  })
 })(jQuery);

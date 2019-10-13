@@ -33,16 +33,19 @@
   display: block;
   margin: 10px 0;
   text-align: center;
+
   &.margin-bottom {
     margin-bottom: 25px;
   }
-  > .description-header {
+
+  >.description-header {
     margin: 0;
     padding: 0;
     font-weight: 600;
     font-size: 16px;
   }
-  > .description-text {
+
+  >.description-text {
     text-transform: uppercase;
   }
 }
@@ -83,7 +86,7 @@
 
 .bg-gray {
   color: #000;
-  background-color: @gray-lte !important;
+  background-color: @gray-lte  !important;
 }
 
 .bg-gray-light {
@@ -91,63 +94,63 @@
 }
 
 .bg-black {
-  background-color: @black !important;
+  background-color: @black  !important;
 }
 
 .bg-red {
-  background-color: @red !important;
+  background-color: @red  !important;
 }
 
 .bg-yellow {
-  background-color: @yellow !important;
+  background-color: @yellow  !important;
 }
 
 .bg-aqua {
-  background-color: @aqua !important;
+  background-color: @aqua  !important;
 }
 
 .bg-blue {
-  background-color: @blue !important;
+  background-color: @blue  !important;
 }
 
 .bg-light-blue {
-  background-color: @light-blue !important;
+  background-color: @light-blue  !important;
 }
 
 .bg-green {
-  background-color: @green !important;
+  background-color: @green  !important;
 }
 
 .bg-navy {
-  background-color: @navy !important;
+  background-color: @navy  !important;
 }
 
 .bg-teal {
-  background-color: @teal !important;
+  background-color: @teal  !important;
 }
 
 .bg-olive {
-  background-color: @olive !important;
+  background-color: @olive  !important;
 }
 
 .bg-lime {
-  background-color: @lime !important;
+  background-color: @lime  !important;
 }
 
 .bg-orange {
-  background-color: @orange !important;
+  background-color: @orange  !important;
 }
 
 .bg-fuchsia {
-  background-color: @fuchsia !important;
+  background-color: @fuchsia  !important;
 }
 
 .bg-purple {
-  background-color: @purple !important;
+  background-color: @purple  !important;
 }
 
 .bg-maroon {
-  background-color: @maroon !important;
+  background-color: @maroon  !important;
 }
 
 //Set of Active Background Colors
@@ -223,71 +226,72 @@
 
 // Text colors
 .text-red {
-  color: @red !important;
+  color: @red  !important;
 }
 
 .text-yellow {
-  color: @yellow !important;
+  color: @yellow  !important;
 }
 
 .text-aqua {
-  color: @aqua !important;
+  color: @aqua  !important;
 }
 
 .text-blue {
-  color: @blue !important;
+  color: @blue  !important;
 }
 
 .text-black {
-  color: @black !important;
+  color: @black  !important;
 }
 
 .text-light-blue {
-  color: @light-blue !important;
+  color: @light-blue  !important;
 }
 
 .text-green {
-  color: @green !important;
+  color: @green  !important;
 }
 
 .text-gray {
-  color: @gray-lte !important;
+  color: @gray-lte  !important;
 }
 
 .text-navy {
-  color: @navy !important;
+  color: @navy  !important;
 }
 
 .text-teal {
-  color: @teal !important;
+  color: @teal  !important;
 }
 
 .text-olive {
-  color: @olive !important;
+  color: @olive  !important;
 }
 
 .text-lime {
-  color: @lime !important;
+  color: @lime  !important;
 }
 
 .text-orange {
-  color: @orange !important;
+  color: @orange  !important;
 }
 
 .text-fuchsia {
-  color: @fuchsia !important;
+  color: @fuchsia  !important;
 }
 
 .text-purple {
-  color: @purple !important;
+  color: @purple  !important;
 }
 
 .text-maroon {
-  color: @maroon !important;
+  color: @maroon  !important;
 }
 
 .link-muted {
   color: darken(@gray-lte, 30%);
+
   &:hover,
   &:focus {
     color: darken(@gray-lte, 40%);
@@ -296,6 +300,7 @@
 
 .link-black {
   color: #666;
+
   &:hover,
   &:focus {
     color: #999;
@@ -335,7 +340,7 @@
 }
 
 .list-group-unbordered {
-  > .list-group-item {
+  >.list-group-item {
     border-left: 0;
     border-right: 0;
     border-radius: 0;
@@ -350,7 +355,10 @@
 }
 
 .text-bold {
-  &, &.table td, &.table th {
+
+  &,
+  &.table td,
+  &.table th {
     font-weight: 700;
   }
 }
@@ -449,9 +457,10 @@
 }
 
 .list-link {
-  > a {
+  >a {
     padding: 4px;
     color: #777;
+
     &:hover {
       color: #222;
     }
@@ -466,34 +475,41 @@
 //User block
 .user-block {
   .clearfix();
+
   img {
     width: 40px;
     height: 40px;
     float: left;
   }
+
   .username,
   .description,
   .comment {
     display: block;
     margin-left: 50px;
   }
+
   .username {
     font-size: 16px;
     font-weight: 600;
   }
+
   .description {
     color: #999;
     font-size: 13px;
   }
+
   &.user-block-sm {
     img {
       &:extend(.img-sm);
     }
+
     .username,
     .description,
     .comment {
       margin-left: 40px;
     }
+
     .username {
       font-size: 14px;
     }
@@ -510,7 +526,8 @@
 .img-sm {
   width: 30px !important;
   height: 30px !important;
-  + .img-push {
+
+  +.img-push {
     margin-left: 40px;
   }
 }
@@ -518,7 +535,8 @@
 .img-md {
   width: 60px;
   height: 60px;
-  + .img-push {
+
+  +.img-push {
     margin-left: 70px;
   }
 }
@@ -526,7 +544,8 @@
 .img-lg {
   width: 100px;
   height: 100px;
-  + .img-push {
+
+  +.img-push {
     margin-left: 110px;
   }
 }
@@ -555,12 +574,15 @@
     height: auto;
     float: left;
   }
+
   .attachment-pushed {
     margin-left: 110px;
   }
+
   .attachment-heading {
     margin: 0;
   }
+
   .attachment-text {
     color: #555;
   }
@@ -589,6 +611,7 @@
 
 .full-opacity-hover {
   .opacity(.65);
+
   &:hover {
     .opacity(1);
   }
@@ -599,6 +622,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+
   svg,
   canvas {
     width: 100% !important;
@@ -608,4 +632,75 @@
 // Horizontal rules
 hr {
   border-top: 1px solid @hr-border;
+}
+
+/* -- Ripple effect -------------------------------- */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.ink {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+// animation effect
+.ink.animate {
+  -webkit-animation: ripple .5s linear;
+  -moz-animation: ripple .5s linear;
+  -ms-animation: ripple .5s linear;
+  -o-animation: ripple .5s linear;
+  animation: ripple .5s linear;
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+
+@-moz-keyframes ripple {
+  100% {
+    opacity: 0;
+    -moz-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+
+@-ms-keyframes ripple {
+  100% {
+    opacity: 0;
+    -ms-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+
+@-o-keyframes ripple {
+  100% {
+    opacity: 0;
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
 }
