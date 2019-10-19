@@ -615,6 +615,11 @@
 .skin-dark-blue .box .border-right {
   border-right: 1px solid #18212b;
 }
+.skin-dark-blue .box .nav > li > a:hover,
+.skin-dark-blue .box .nav > li > a:active,
+.skin-dark-blue .box .nav > li > a:focus {
+  background: #25374c;
+}
 .skin-dark-blue .box-footer {
   background-color: #1d2834;
   border-top: 1px solid #141c24;
@@ -748,10 +753,9 @@
 .skin-dark-blue .nav-stacked > li > a {
   color: #ececed;
 }
-.skin-dark-blue .nav > li > a:hover,
-.skin-dark-blue .nav > li > a:active,
-.skin-dark-blue .nav > li > a:focus {
-  background: #2c3541;
+.skin-dark-blue .nav-stacked > li.active > a,
+.skin-dark-blue .nav-stacked > li.active > a:hover {
+  color: #ececed;
 }
 .skin-dark-blue .direct-chat-text {
   color: #ececed;

@@ -278,6 +278,12 @@
     .border-right {
       border-right: 1px solid darken(@dark-blue, 5%);
     }
+
+    .nav>li>a:hover,
+    .nav>li>a:active,
+    .nav>li>a:focus {
+      background: @dark-blue-form;
+    }
   }
 
   .box-footer {
@@ -404,14 +410,15 @@
     color: @dark-text-color;
   }
 
-  .nav-stacked>li>a {
-    color: @dark-text-color;
-  }
+  .nav-stacked>li {
+    &>a {
+      color: @dark-text-color;
+    }
 
-  .nav>li>a:hover,
-  .nav>li>a:active,
-  .nav>li>a:focus {
-    background: @dark-blue-menu-hilight;
+    &.active>a,
+    &.active>a:hover {
+      color: @dark-text-color;
+    }
   }
 
   .direct-chat-text {
