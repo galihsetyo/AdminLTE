@@ -475,7 +475,7 @@
 .skin-dark-blue select:-webkit-autofill,
 .skin-dark-blue select:-webkit-autofill:hover,
 .skin-dark-blue select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #ececed;
+  -webkit-text-fill-color: #ececed !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 .skin-dark-blue .content-header > h1 {
@@ -816,6 +816,30 @@
   background-color: #18212b;
   border: #212d3b;
   color: #ececed;
+}
+.skin-dark-blue .pp-container {
+  background-color: #263445;
+  border-right: 1px solid #18212b;
+}
+@media (min-width: 767px) {
+  .skin-dark-blue .nav-tabs.nav-justified > .active > a,
+  .skin-dark-blue .nav-tabs.nav-justified > .active > a:focus,
+  .skin-dark-blue .nav-tabs.nav-justified > .active > a:hover {
+    border-color: #18212b;
+    border-bottom-color: #212d3b;
+  }
+}
+.skin-dark-blue .nav-tabs.nav-justified > li > a {
+  border-bottom: 1px solid #18212b;
+}
+.skin-dark-blue .nav-tabs.nav-justified > li:not(.active) > a:hover,
+.skin-dark-blue .nav-tabs.nav-justified > li:not(.active) > a:focus,
+.skin-dark-blue .nav-tabs.nav-justified > li:not(.active) > a:active {
+  border-bottom: 1px solid #18212b;
+}
+.skin-dark-blue legend {
+  color: #ececed;
+  border-bottom: 1px solid #18212b;
 }
 /*
  * Skin: Black
