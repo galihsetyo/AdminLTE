@@ -796,16 +796,19 @@
           <div class="col-xs-12">
             <div class="box">
               <div class="box-header">
+                <div id="tablesearchbar" class="animated">
+                  <form ng-submit="caridata()">
+                    <input ng-model="pencarian" id="kotakpencarian" type="text" class="form-control"
+                      placeholder="Cari di sini..." autocomplete="off">
+                    <a role="button" class="btn-submit" type="submit"><i class="fa fa-angle-left"></i></a>
+                    <a role="button" class="btn-close"><i class="fa fa-times"></i></a>
+                  </form>
+                </div>
                 <h3 class="box-title">Responsive Hover Table</h3>
 
-                <div class="box-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                    <div class="input-group-btn">
-                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                    </div>
-                  </div>
+                <div class="box-tools pull-right">
+                  <a id="searchbutton" type="button" class="btn btn-flat btn-box-tool"><i
+                      class="ion-android-search fa-lg"></i> Cari</a>
                 </div>
               </div>
               <!-- /.box-header -->

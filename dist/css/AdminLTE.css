@@ -2200,6 +2200,35 @@ a:focus {
 .modal .panel-body {
   color: #444;
 }
+#tablesearchbar {
+  width: 100%;
+  height: 41px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  display: none;
+}
+#tablesearchbar .form-control {
+  border: none;
+  padding-right: 40px;
+  padding-left: 30px;
+  height: 40px !important;
+}
+#tablesearchbar .btn-close {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 13px;
+  color: #b5b5b5;
+}
+#tablesearchbar .btn-submit {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 12px;
+  color: #b5b5b5;
+}
 /*
  * Component: Info Box
  * -------------------
