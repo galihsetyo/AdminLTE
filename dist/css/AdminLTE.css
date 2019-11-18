@@ -2425,8 +2425,37 @@ a:focus {
   cursor: inherit;
   display: block;
 }
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0px 0px;
+}
+.btn-circle > .fa {
+  width: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+.btn-circle i {
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.btn-circle:hover i {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+}
 .btn-default {
-  color: #ffffff;
+  color: #333333;
   background-color: #f4f4f4;
   border-color: #e7e7e7;
 }
